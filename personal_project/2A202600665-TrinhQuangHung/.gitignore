@@ -1,0 +1,6 @@
+.env
+__pycache__/
+.venv/
+.pytest_cache/
+.deepeval/
+embeddings_cache.json
