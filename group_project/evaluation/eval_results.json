@@ -1,0 +1,602 @@
+[
+  {
+    "config_name": "hybrid_rerank",
+    "aggregate": {
+      "faithfulness": 0.9354,
+      "answer_relevancy": 0.5709,
+      "contextual_recall": 0.7979,
+      "contextual_precision": 0.6646,
+      "overall": 0.7422
+    },
+    "per_case": [
+      {
+        "question": "Hình phạt cho tội tàng trữ trái phép chất ma tuý theo Điều 249 Bộ luật Hình sự?",
+        "answer": "Dựa trên các nguồn đã truy xuất, câu trả lời là:\n- phép chất ma túy); Điều 249 (tội tàng trữ trái phép chất ma túy); Điều 250 (tội vận chuyển trái phép chất ma túy); Điều 251 (tội mua bán trái phép chất ma túy); Điều 252 (tội chiếm đoạt chất ma túy) của Bộ luật này; c) Người dưới 18 tuổi là người đồng phạm nhưng có vai trò không đáng kể trong vụ án. [BỘ LUẬT HÌNH SỰ, legal]\n- ướp giật tài sản); Điều 248 (tội sản xuất trái phép chất ma túy); Điều 249 (tội tàng trữ trái phép chất ma túy); Điều 250 (tội vận chuyển trái phép chất ma túy); Điều 251 (tội mua bán trái phép chất ma túy); Điều 252 (tội chiếm đoạt chất ma túy) của Bộ luật này; [BỘ LUẬT HÌNH SỰ, legal]\n- mua bán người dưới 16 tuổi); Điều 168 (tội cướp tài sản); Điều 171 (tội cướp giật tài sản); Điều 248 (tội sản xuất trái phép chất ma túy); Điều 249 (tội tàng trữ trái phép chất ma túy); Điều 250 (tội vận chuyển trái phép chất ma túy); Điều [BỘ LUẬT HÌNH SỰ, legal]\n- Người nào tàng trữ trái phép chất ma túy mà không nhằm mục đích mua bán, vận chuyển, sản xuất trái phép chất ma túy thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 03 năm đến 05 năm: a) Đã bị xử phạt vi phạm hành chính về hành vi quy định tại Điều này hoặc đã bị kết án về tội này hoặc một trong các tội quy định tại các điều 248, 250, 251, 252 và [151, legal]",
+        "n_sources": 5,
+        "scores": {
+          "faithfulness": 0.7778,
+          "answer_relevancy": 0.3,
+          "contextual_recall": 1.0,
+          "contextual_precision": 1.0
+        },
+        "case_avg": 0.7694,
+        "reasons": {
+          "faithfulness": "The score is 0.78 because the actual output contains two notable inaccuracies. First, it mischaracterizes Article 252 as addressing only 'drug appropriation' when the context specifies it covers both 'drug seizure or appropriation'. Second, it incorrectly states the sentence range as 'from 03 to 05 years' when the context clearly indicates it should be 'from 01 year to 05 years'. These omissions and misstatements reduce the overall faithfulness to the source material.",
+          "answer_relevancy": "The score is 0.30 because the actual output contains numerous irrelevant statements that do not address the specific question about penalties for illegal drug possession under Article 249. The output incorrectly includes information about drug transportation (Article 250), drug trafficking (Article 251), drug seizure (Article 252), drug manufacturing (Article 248), and completely unrelated crimes like robbery (Article 168) and snatching property (Article 171). Additionally, information about accomplices under 18 years old is not relevant to the core question. While some relevant content may be present, the majority of the response consists of off-topic legal provisions, significantly reducing its relevance to the input.",
+          "contextual_recall": "The score is 1.00 because the expected output is fully supported by nodes in retrieval context. The primary legal provision regarding illegal drug possession without intent for sale, transportation, or production—including the 1 to 5-year imprisonment sentence—is directly found in the 1st and 2nd nodes. While the context doesn't explicitly detail the escalation of penalties based on quantity and circumstances, the core legal framework and sentencing range are comprehensively covered, making this a complete and accurate response.",
+          "contextual_precision": "The score is 1.00 because all relevant nodes are ranked higher than irrelevant nodes. The first two nodes in the retrieval contexts are marked as relevant and ranked at positions 1 and 2, both directly addressing the question by providing Article 249's penalties with specific quotes: 'Người nào tàng trữ trữ trái phép chất ma túy mà không nhằm mục đích mua bán, vận chuyển, sản xuất trái phép chất ma túy...thì bị phạt tù từ 03 năm đến 05 năm' and 'thì bị phạt tù từ 01 năm đến 05 năm' respectively. The three irrelevant nodes are ranked at positions 3, 4, and 5, only tangentially mentioning Article 249 in contexts of criminal liability for minors, criminal exemptions, or general crime lists without providing the specific penalties requested. Perfect ranking!"
+        }
+      },
+      {
+        "question": "Luật Phòng chống ma tuý 2021 quy định những hình thức cai nghiện nào?",
+        "answer": "Dựa trên các nguồn đã truy xuất, câu trả lời là:\n- dụng biện pháp xử lý hành chính đưa vào cơ sở cai nghiện bắt buộc; 34 CÔNG BÁO/Số 567 + 568/Ngày 30-4-2021 c) Người đang chấp hành quyết định cai nghiện ma túy bắt buộc tại cộng đồng theo quy định của Luật Phòng, chống ma túy số 23/2000/QH10 đã được sửa đổi, bổ sung một số điều theo Luật số 16/2008/QH12 thì được đăng ký cai nghiện tự nguyện theo quy định của Luật này. [4, legal]\n- y; 26 CÔNG BÁO/Số 567 + 568/Ngày 30-4-2021 d) Người đứng đầu cơ sở cai nghiện ma túy có trách nhiệm bảo đảm điều kiện hoạt động của cơ sở cai nghiện ma túy; niêm yết công khai chi phí liên quan đến cai nghiện ma túy tại cơ sở theo quy định của pháp luật; đ) Phòng, chống thẩm lậu ma túy vào cơ sở; e) Bố trí các khu hoặc phòng riêng khi tiếp nhận các đối tượng [4, legal]\n- Phòng, chống ma túy; b) Đang trong thời hạn quản lý sau cai nghiện ma túy theo quy định của Luật Phòng, chống ma túy; c) Đang trong thời hạn 02 năm kể từ ngày hết thời hạn quản lý sau cai nghiện ma túy và trong thời hạn quản lý người sử dụng trái phép chất ma túy theo quy định của Luật Phòng, chống ma túy; d) Đang trong thời hạn 02 năm kể từ khi tự ý chấm [151, legal]\n- dứt cai nghiện ma túy tự nguyện hoặc điều trị nghiện các chất ma túy bằng thuốc thay thế theo quy định của Luật Phòng, chống ma túy. [151, legal]",
+        "n_sources": 5,
+        "scores": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.8889,
+          "contextual_recall": 0.6667,
+          "contextual_precision": 0.0
+        },
+        "case_avg": 0.6389,
+        "reasons": {
+          "faithfulness": "The score is 1.00 because the actual output contains no contradictions with the retrieval context. Excellent work!",
+          "answer_relevancy": "The score is 0.89 because the response addresses the question about drug addiction treatment forms well, but references an outdated legal framework (Law 23/2000/QH10) instead of the 2021 Law on Drug Prevention and Control that was specifically asked about. This legal inaccuracy prevents a higher score, though the core content about addiction treatment forms remains largely relevant.",
+          "contextual_recall": "The score is 0.67 because the retrieval context in nodes 1 and 4 adequately supports the distinction between mandatory and voluntary drug rehabilitation types and mentions mandatory rehabilitation at public facilities. However, the context lacks explicit information about the specific implementation locations for voluntary rehabilitation (at home, community, or rehabilitation facilities), which is a key detail in the expected output. This partial coverage of the main concepts with incomplete details on voluntary rehabilitation implementation accounts for the moderate contextual recall score.",
+          "contextual_precision": "The score is 0.00 because all five nodes in the retrieval contexts are irrelevant to the input question about the forms of drug rehabilitation defined in the 2021 Drug Prevention and Control Law. The first node mentions 'cai nghiện bắt buộc' (mandatory drug rehabilitation) but does not clearly explain the forms of drug rehabilitation. The second node discusses management after rehabilitation and penalties for relapse rather than the forms themselves. The third node describes responsibilities of rehabilitation facilities instead of explaining the rehabilitation forms. The fourth node similarly mentions mandatory rehabilitation but fails to provide comprehensive explanation of both voluntary and mandatory forms. The fifth node addresses the Ministry of Health's responsibilities in research rather than the specific forms of rehabilitation. Since no relevant nodes were retrieved to answer the question about rehabilitation forms, the contextual precision score reflects a complete absence of properly ranked relevant content."
+        }
+      },
+      {
+        "question": "Tội sản xuất trái phép chất ma tuý bị xử lý thế nào theo Điều 248?",
+        "answer": "Dựa trên các nguồn đã truy xuất, câu trả lời là:\n- mua bán người dưới 16 tuổi); Điều 168 (tội cướp tài sản); Điều 171 (tội cướp giật tài sản); Điều 248 (tội sản xuất trái phép chất ma túy); Điều 249 (tội tàng trữ trái phép chất ma túy); Điều 250 (tội vận chuyển trái phép chất ma túy); Điều [BỘ LUẬT HÌNH SỰ, legal]\n- i phạm quy định về đầu tư công trình xây dựng gây hậu quả nghiêm trọng); Điều 243, các khoản 2 và 3 (tội hủy hoại rừng); e) Điều 248 (tội sản xuất trái phép chất ma túy); Điều 249 (tội tàng trữ trái phép chất ma túy); Điều 250 (tội vận chuyển trái phép chất ma túy); Điều 251 (tội mua bán trái phép chất ma túy); Điều 252 (tội chiếm đoạt chất ma túy); Điều 253 [BỘ LUẬT HÌNH SỰ, legal]\n- các điều sau đây: a) Điều 143 (tội cưỡng dâm); Điều 150 (tội mua bán người); Điều 151 (tội mua bán người dưới 16 tuổi); b) Điều 170 (tội cưỡng đoạt tài sản); Điều 171 (tội cướp giật tài sản); Điều 173 (tội trộm cắp tài sản); Điều 178 (tội hủy hoại hoặc cố ý làm hư hỏng tài sản); c) Điều 248 (tội sản xuất trái phép chất ma túy); Điều 249 (tội tàng trữ trái ph [BỘ LUẬT HÌNH SỰ, legal]\n- Người nào tàng trữ trái phép chất ma túy mà không nhằm mục đích mua bán, vận chuyển, sản xuất trái phép chất ma túy thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 03 năm đến 05 năm: a) Đã bị xử phạt vi phạm hành chính về hành vi quy định tại Điều này hoặc đã bị kết án về tội này hoặc một trong các tội quy định tại các điều 248, 250, 251, 252 và [151, legal]",
+        "n_sources": 5,
+        "scores": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.4375,
+          "contextual_recall": 1.0,
+          "contextual_precision": 0.5
+        },
+        "case_avg": 0.7344,
+        "reasons": {
+          "faithfulness": "The score is 1.00 because the actual output contains no contradictions with the retrieval context. Excellent work!",
+          "answer_relevancy": "The score is 0.44 because the actual output discusses multiple irrelevant articles (168, 171, 243, 143, 150, 151, 170, 173, 178) covering crimes like robbery, snatching, forest destruction, rape, human trafficking, extortion, theft, and property damage—none of which address the input's specific question about how illegal drug manufacturing is handled under Article 248. The response fails to focus on the relevant legal provisions for drug manufacturing offenses.",
+          "contextual_recall": "The score is 1.00 because the expected output is fully supported by node 2 in retrieval context, which contains Điều 248 detailing penalties for illegal drug production. The node provides comprehensive coverage of both the base penalty (2-7 years imprisonment) and aggravated penalties (up to 20 years, life imprisonment, or death penalty), perfectly matching all information in the expected output.",
+          "contextual_precision": "The score is 0.50 because while one relevant node in retrieval contexts is present, it is not ranked optimally. The second node in retrieval contexts correctly addresses the question by stating 'Người nào sản xuất trái phép chất ma túy dưới bất kỳ hình thức nào, thì bị phạt tù từ 02 năm đến 07 năm' and provides information about aggravated circumstances. However, this relevant node is preceded by the first node in retrieval contexts, which only mentions Điều 248 as a reference without providing actual penalties. Additionally, three irrelevant nodes follow the relevant one, with the third and fourth nodes in retrieval contexts merely listing Điều 248 without specific penalties, and the fifth node in retrieval contexts discussing a different crime (Điều 249 on illegal possession rather than production). The ranking fails to prioritize the highly relevant content, resulting in a moderate precision score."
+        }
+      },
+      {
+        "question": "Tội mua bán trái phép chất ma tuý theo Điều 251 có khung hình phạt cao nhất là gì?",
+        "answer": "Dựa trên các nguồn đã truy xuất, câu trả lời là:\n- Người nào tàng trữ trái phép chất ma túy mà không nhằm mục đích mua bán, vận chuyển, sản xuất trái phép chất ma túy thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 03 năm đến 05 năm: a) Đã bị xử phạt vi phạm hành chính về hành vi quy định tại Điều này hoặc đã bị kết án về tội này hoặc một trong các tội quy định tại các điều 248, 250, 251, 252 và [151, legal]\n- ép chất ma túy); Điều 250 (tội vận chuyển trái phép chất ma túy); Điều 251 (tội mua bán trái phép chất ma túy); Điều 252 (tội chiếm đoạt chất ma túy); d) Điều 265 (tội tổ chức đua xe trái phép); Điều 266 (tội đua xe trái phép); [BỘ LUẬT HÌNH SỰ, legal]\n- phép chất ma túy); Điều 249 (tội tàng trữ trái phép chất ma túy); Điều 250 (tội vận chuyển trái phép chất ma túy); Điều 251 (tội mua bán trái phép chất ma túy); Điều 252 (tội chiếm đoạt chất ma túy) của Bộ luật này; c) Người dưới 18 tuổi là người đồng phạm nhưng có vai trò không đáng kể trong vụ án. [BỘ LUẬT HÌNH SỰ, legal]\n- các điều sau đây: a) Điều 143 (tội cưỡng dâm); Điều 150 (tội mua bán người); Điều 151 (tội mua bán người dưới 16 tuổi); b) Điều 170 (tội cưỡng đoạt tài sản); Điều 171 (tội cướp giật tài sản); Điều 173 (tội trộm cắp tài sản); Điều 178 (tội hủy hoại hoặc cố ý làm hư hỏng tài sản); c) Điều 248 (tội sản xuất trái phép chất ma túy); Điều 249 (tội tàng trữ trái ph [BỘ LUẬT HÌNH SỰ, legal]",
+        "n_sources": 5,
+        "scores": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.3125,
+          "contextual_recall": 0.0,
+          "contextual_precision": null
+        },
+        "case_avg": 0.4375,
+        "reasons": {
+          "faithfulness": "The score is 1.00 because the actual output contains no contradictions with the retrieval context. Excellent work!",
+          "answer_relevancy": "The score is 0.31 because the actual output contains extensive irrelevant information about unrelated crimes (street racing, rape, human trafficking, extortion, robbery, theft, property destruction) and tangential legal provisions (Article 252, sentencing for minors as accomplices) when the input specifically asks only about the maximum penalty for illegal drug trafficking under Article 251. The response is heavily diluted with off-topic content that does not directly address the focused question.",
+          "contextual_recall": "The score is 0.00 because the retrieval context in node(s) in retrieval context does not contain information about the maximum penalties for illegal drug trafficking mentioned in the expected output. While the context references penalties of 2-7 years and 7-15 years imprisonment, it fails to support the key claims in the expected output regarding the 20-year maximum sentence, life imprisonment, or death sentence for particularly serious cases involving large quantities of drugs.",
+          "contextual_precision": "ERROR: Evaluation LLM outputted an invalid JSON. Please use a better evaluation model."
+        }
+      },
+      {
+        "question": "Tội tổ chức sử dụng trái phép chất ma tuý được quy định ở điều nào và phạt ra sao?",
+        "answer": "Dựa trên các nguồn đã truy xuất, câu trả lời là:\n- hoặc sử dụng trái phép chất ma túy); Điều 255 (tội tổ chức sử dụng trái phép chất ma túy); Điều 256 (tội chứa chấp việc sử dụng trái phép chất ma túy); Điều 257 (tội cưỡng bức người khác sử dụng trái phép chất ma túy); Điều 258 (tội lôi kéo [BỘ LUẬT HÌNH SỰ, legal]\n- ân dân cấp xã có trách nhiệm ra quyết định và tổ chức quản lý người sử dụng trái phép chất ma túy cư trú tại địa phương. [LUẬT PHÒNG, CHỐNG MA TÚY, legal]\n- Trong thời hạn 03 ngày làm việc, kể từ ngày nhận được thông báo về hành vi sử dụng trái phép chất ma túy và kết quả xét nghiệm chất ma túy trong cơ thể, Chủ tịch Ủy ban nhân dân cấp xã nơi người sử dụng trái phép chất ma túy cư trú ổn định hoặc nơi phát hiện hành vi sử dụng trái phép chất ma túy đối với người không có nơi cư trú ổn định ra quyết định và tổ c [NGHỊ ĐỊNH, legal]\n- hức quản lý người sử dụng trái phép chất ma túy theo quy định tại khoản 2, khoản 4 Điều 23 của Luật Phòng, chống ma túy. [NGHỊ ĐỊNH, legal]",
+        "n_sources": 5,
+        "scores": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.5714,
+          "contextual_recall": 1.0,
+          "contextual_precision": 0.3333
+        },
+        "case_avg": 0.7262,
+        "reasons": {
+          "faithfulness": "The score is 1.00 because the actual output contains no contradictions with the retrieval context. Excellent work!",
+          "answer_relevancy": "The score is 0.57 because while the output addresses drug-related offenses under Vietnamese law, it covers three different articles (256, 257, 258) that deal with harboring, forcing, and luring drug use respectively—none of which directly address organizing illegal drug use as specifically asked in the input. The response lacks focus on the correct legal provision for the 'organizing' aspect of drug use offenses, resulting in mostly irrelevant information despite being in the correct legal domain.",
+          "contextual_recall": "The score is 1.00 because the expected output is fully supported by the retrieval context. Node 3 in retrieval context provides the article reference (Điều 255) and confirms the crime of organizing illegal drug use, establishing complete attribution for the content presented.",
+          "contextual_precision": "The score is 0.33 because only 1 out of 5 retrieval contexts nodes is relevant. The relevant node appears at rank 3, after two irrelevant nodes that discuss Article 42 and administrative management procedures rather than the criminal offense. The first node states it 'does not address the criminal offense of organizing illegal drug use or its penalties,' and the second node is a duplicate with the same limitation. The third node correctly identifies 'Điều 255 (tội tổ chức sử dụng trái phép chất ma túy)' as the exact legal provision needed. However, the ranking is suboptimal because irrelevant nodes discussing administrative management should have been ranked lower than the relevant node that directly addresses the criminal law provision. Additionally, the fourth and fifth nodes, while irrelevant or incomplete, are ranked after the relevant node, which further reduces precision."
+        }
+      },
+      {
+        "question": "Tội vận chuyển trái phép chất ma tuý theo Điều 250 khác gì với tội tàng trữ?",
+        "answer": "Dựa trên các nguồn đã truy xuất, câu trả lời là:\n- mua bán người dưới 16 tuổi); Điều 168 (tội cướp tài sản); Điều 171 (tội cướp giật tài sản); Điều 248 (tội sản xuất trái phép chất ma túy); Điều 249 (tội tàng trữ trái phép chất ma túy); Điều 250 (tội vận chuyển trái phép chất ma túy); Điều [BỘ LUẬT HÌNH SỰ, legal]\n- i phạm quy định về đầu tư công trình xây dựng gây hậu quả nghiêm trọng); Điều 243, các khoản 2 và 3 (tội hủy hoại rừng); e) Điều 248 (tội sản xuất trái phép chất ma túy); Điều 249 (tội tàng trữ trái phép chất ma túy); Điều 250 (tội vận chuyển trái phép chất ma túy); Điều 251 (tội mua bán trái phép chất ma túy); Điều 252 (tội chiếm đoạt chất ma túy); Điều 253 [BỘ LUẬT HÌNH SỰ, legal]\n- ướp giật tài sản); Điều 248 (tội sản xuất trái phép chất ma túy); Điều 249 (tội tàng trữ trái phép chất ma túy); Điều 250 (tội vận chuyển trái phép chất ma túy); Điều 251 (tội mua bán trái phép chất ma túy); Điều 252 (tội chiếm đoạt chất ma túy) của Bộ luật này; [BỘ LUẬT HÌNH SỰ, legal]\n- phép chất ma túy); Điều 249 (tội tàng trữ trái phép chất ma túy); Điều 250 (tội vận chuyển trái phép chất ma túy); Điều 251 (tội mua bán trái phép chất ma túy); Điều 252 (tội chiếm đoạt chất ma túy) của Bộ luật này; c) Người dưới 18 tuổi là người đồng phạm nhưng có vai trò không đáng kể trong vụ án. [BỘ LUẬT HÌNH SỰ, legal]",
+        "n_sources": 5,
+        "scores": {
+          "faithfulness": 0.8889,
+          "answer_relevancy": 0.4545,
+          "contextual_recall": 1.0,
+          "contextual_precision": 0.0
+        },
+        "case_avg": 0.5858,
+        "reasons": {
+          "faithfulness": "The score is 0.89 because the actual output incorrectly describes Article 252 as concerning 'appropriation of drugs' when the retrieval context clearly specifies it addresses 'drug seizure' instead. This terminology mismatch represents a notable inaccuracy, though the overall content remains largely faithful to the source material.",
+          "answer_relevancy": "The score is 0.45 because the response included multiple irrelevant articles and provisions (Articles 168, 171, 243, investment/construction violations, and age-related provisions) that do not address the core question about the differences between illegal drug transportation (Article 250) and drug possession. While some relevant information may be present, the substantial inclusion of unrelated legal content significantly dilutes the relevancy of the answer to the specific comparison being asked.",
+          "contextual_recall": "The score is 1.00 because all key information in the expected output is fully supported by the retrieval context. Sentence 1 about Điều 250 handling illegal drug transportation is directly confirmed by nodes 1-5 in retrieval context, and the distinction between Điều 250 (transportation) and Điều 249 (storage) is explicitly supported by node 2. Excellent retrieval coverage!",
+          "contextual_precision": "The score is 0.00 because all five nodes in the retrieval contexts are irrelevant to the input question. The input asks for an explanation of the differences between Article 250 (illegal drug transportation) and Article 249 (illegal drug possession). However, all nodes merely list these articles without explaining their distinctions. The first node states it \"only lists them without explaining the differences,\" the second node \"provides no explanation of the distinction,\" the third node \"without providing any substantive information about the differences,\" the fourth node \"does not explain the distinction,\" and the fifth node \"without providing any explanation of the differences.\" Since no relevant nodes exist in the retrieval contexts, there are no relevant nodes ranked higher than irrelevant nodes, resulting in a contextual precision score of 0.00."
+        }
+      },
+      {
+        "question": "Nghị định 105/2021/NĐ-CP hướng dẫn những nội dung gì của Luật Phòng chống ma tuý?",
+        "answer": "Dựa trên các nguồn đã truy xuất, câu trả lời là:\n- CHÍNH PHỦ CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM ------- Độc lập - Tự do - Hạnh phúc --------------- Số: 105/2021/NĐ-CP Hà Nội, ngày 04 tháng 12 năm 2021 NGHỊ ĐỊNH QUY ĐỊNH CHI TIẾT VÀ HƯỚNG DẪN THI HÀNH MỘT SỐ ĐIỀU CỦA LUẬT PHÒNG, CHỐNG MA TÚY Căn cứ Luật Tổ chức Chính phủ ngày 19 tháng 6 năm 2015; Luật sửa đổi, bổ sung một số điều của Luật Tổ chức Chính phủ và [CHÍNH PHỦ CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM, legal]\n- Luật Tổ chức chính quyền địa phương ngày 22 tháng 11 năm 2019; Căn cứ Luật Phòng, chống ma túy ngày 30 tháng 3 năm 2021; Theo đề nghị của Bộ trưởng Bộ Công an; Chính phủ ban hành Nghị định quy định chi tiết và hướng dẫn thi hành một số điều của Luật Phòng, chống ma túy. [CHÍNH PHỦ CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM, legal]\n- 6 năm 2015; Luật sửa đổi, bổ sung một số điều của Luật Tổ chức Chính phủ và Luật Tổ chức chính quyền địa phương ngày 22 tháng 11 năm 2019; Căn cứ Luật Phòng, chống ma túy ngày 30 tháng 3 năm 2021; Căn cứ Nghị định số ........../2021/NĐ-CP ngày ... [CHÍNH PHỦ CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM, legal]\n- năm 2021 của Chính phủ quy định chi tiết và hướng dẫn thi hành một số điều của Luật Phòng, chống ma túy; Xét đề nghị của Trưởng Công an..................................................................................... [CHÍNH PHỦ CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM, legal]",
+        "n_sources": 5,
+        "scores": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.875,
+          "contextual_recall": 0.6,
+          "contextual_precision": 1.0
+        },
+        "case_avg": 0.8688,
+        "reasons": {
+          "faithfulness": "The score is 1.00 because the actual output contains no contradictions with the retrieval context. Excellent work!",
+          "answer_relevancy": "The score is 0.88 because the response addresses the main question about what contents of Law 105/2021/NĐ-CP covers regarding drug prevention. However, it includes information about who proposed the decree, which is not relevant to the specific question about the law's contents, preventing a higher score.",
+          "contextual_recall": "The score is 0.60 because the retrieval context in nodes 1-5 successfully supports the identification of Nghị định 105/2021/NĐ-CP and its primary purpose of detailing the Drug Prevention and Control Law, as well as the management of illegal drug users. However, two significant components of the expected output lack support in the retrieval context: the explicit mention of 'kiểm soát hoạt động hợp pháp liên quan đến ma túy' (control of legal drug-related activities) and 'công tác cai nghiện' (drug rehabilitation work) are not found in the provided nodes, which accounts for the moderate recall score.",
+          "contextual_precision": "The score is 1.00 because the retrieval contexts are perfectly ranked by relevance. The first node in the retrieval context is highly relevant, directly stating that Nghị định 105/2021/NĐ-CP is about 'QUY ĐỊNH CHI TIẾT VÀ HƯỚNG DẪN THI HÀNH MỘT SỐ ĐIỀU CỦA LUẬT PHÒNG, CHỐNG MA TÚY' and providing the core information needed to answer the input question. All subsequent nodes (ranked 2-5) are irrelevant, as they merely reference the decree without explaining its specific contents, instead serving as templates for import/export permits and management decision forms. The relevant node is appropriately ranked first, while all irrelevant nodes follow, demonstrating excellent contextual precision."
+        }
+      },
+      {
+        "question": "Trách nhiệm của cá nhân, gia đình trong phòng, chống ma tuý theo luật là gì?",
+        "answer": "Dựa trên các nguồn đã truy xuất, câu trả lời là:\n- Phạm vi điều chỉnh Luật này quy định về phòng, chống ma túy; quản lý người sử dụng trái phép chất ma túy; cai nghiện ma túy; trách nhiệm của cá nhân, gia đình, cơ quan, tổ chức trong phòng, chống ma túy; quản lý nhà nước và hợp tác quốc tế về phòng, chống ma túy. [LUẬT PHÒNG, CHỐNG MA TÚY, legal]\n- Trách nhiệm của cá nhân, gia đình 1. [LUẬT PHÒNG, CHỐNG MA TÚY, legal]\n- Tuyên truyền, giáo dục thành viên trong gia đình, người thân về tác hại của ma túy và thực hiện quy định của pháp luật về phòng, chống ma túy; quản lý, ngăn chặn thành viên trong gia đình vi phạm pháp luật về phòng, chống ma túy. [LUẬT PHÒNG, CHỐNG MA TÚY, legal]\n- Chương II TRÁCH NHIỆM PHÒNG, CHỐNG MA TÚY Điều 6. [LUẬT PHÒNG, CHỐNG MA TÚY, legal]",
+        "n_sources": 5,
+        "scores": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 1.0,
+          "contextual_recall": 0.5,
+          "contextual_precision": 1.0
+        },
+        "case_avg": 0.875,
+        "reasons": {
+          "faithfulness": "The score is 1.00 because the actual output contains no contradictions with the retrieval context. Excellent work!",
+          "answer_relevancy": "The score is 1.00 because the output directly and comprehensively addresses the input question about individual and family responsibilities in drug prevention and control according to the law. All content is relevant and on-topic with no irrelevant statements detected. Great job!",
+          "contextual_recall": "The score is 0.50 because the retrieval context in nodes 1 and 2 supports approximately half of the expected output. Specifically, sentences regarding propaganda, education of family members about drug harms, and coordination with authorities in drug prevention are found in Điều 6 of the nodes in retrieval context. However, two key responsibilities mentioned in the expected output lack support: the requirement to declare addiction status and the responsibility to participate in supporting drug rehabilitation, neither of which are explicitly addressed in the provided nodes.",
+          "contextual_precision": "The score is 1.00 because the retrieval system performed perfectly. The first node in the retrieval contexts is relevant, directly stating 'Tuyên truyền, giáo dục thành viên trong gia đình, người thân về tác hại của ma túy và thực hiện quy định của pháp luật về phòng, chống ma túy; quản lý, ngăn chặn thành viên trong gia đình vi phạm pháp luật về phòng, chống ma túy,' which comprehensively answers the input question. All four irrelevant nodes that follow (ranks 2-5) are correctly ranked lower, as they either focus on prohibited behaviors, provide only general scope without specific details, or merely mention responsibilities without elaborating on them. The ranking demonstrates excellent contextual precision!"
+        }
+      },
+      {
+        "question": "Người nghiện ma tuý trong thời gian cai nghiện có những quyền và nghĩa vụ gì?",
+        "answer": "Dựa trên các nguồn đã truy xuất, câu trả lời là:\n- 567 + 568/Ngày 30-4-2021 25 c) Bảo đảm quyền của người nghiện ma túy trong thời gian cai nghiện và cấp giấy xác nhận hoàn thành cai nghiện ma túy bắt buộc cho người từ đủ 12 tuổi đến dưới 18 tuổi; d) Người đứng đầu cơ sở cai nghiện ma túy công lập có trách nhiệm bảo đảm [4, legal]\n- ghị xác định tình trạng nghiện ma túy và người đang trong thời gian lập hồ sơ đề nghị đưa vào cơ sở cai nghiện bắt buộc; c) Bảo đảm quyền của người nghiện ma túy trong thời gian cai nghiện và cấp giấy xác nhận hoàn thành cai nghiện ma túy bắt buộc cho người từ đủ 12 tuổi đến dưới 18 tuổi; d) Người đứng đầu cơ sở cai nghiện ma túy công lập có trách nhiệm bảo [LUẬT PHÒNG, CHỐNG MA TÚY, legal]\n- Cơ sở cai nghiện ma túy tự nguyện có trách nhiệm sau đây: a) Tuân thủ quy trình cai nghiện ma túy; b) Tôn trọng tính mạng, sức khỏe, danh dự, nhân phẩm, tài sản của người cai nghiện ma túy; c) Bảo đảm quyền của người nghiện ma túy từ đủ 12 tuổi đến dưới 18 tuổi trong thời gian cai nghiện ma túy; 26 CÔNG BÁO/Số 567 + 568/Ngày 30-4-2021 d) Người đứng đầu cơ sở cai nghiện ma túy có trách nhiệm bảo đảm điều kiện [4, legal]\n- úy, quy trình cai nghiện ma túy, quản lý người đang trong thời gian lập hồ sơ đề nghị đưa vào cơ sở cai nghiện bắt buộc; b) Tôn trọng tính mạng, sức khỏe, danh dự, nhân phẩm, tài sản của người cai nghiện ma túy, người được đề nghị xác định tình trạng nghiện ma túy và người đang trong thời gian lập hồ sơ đề nghị đưa vào cơ sở cai nghiện bắt buộc; CÔNG BÁO/Số [4, legal]",
+        "n_sources": 5,
+        "scores": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.75,
+          "contextual_recall": 1.0,
+          "contextual_precision": 1.0
+        },
+        "case_avg": 0.9375,
+        "reasons": {
+          "faithfulness": "The score is 1.00 because the actual output contains no contradictions with the retrieval context. Excellent work!",
+          "answer_relevancy": "The score is 0.75 because while the response addresses the general topic of drug addiction rehabilitation, it diverges from the core question by focusing on addiction identification and management procedures rather than directly explaining the specific rights and obligations of drug addicts during rehabilitation. The answer would be stronger if it concentrated more directly on enumerating and explaining those rights and obligations.",
+          "contextual_recall": "The score is 1.00 because all aspects of the expected output are comprehensively supported by the retrieval context. The counseling, treatment, and support provisions are directly attributed to nodes 4 and 5 in retrieval context, which explicitly address reception, management, education, counseling, and treatment services, as well as ensuring rights during detoxification. The obligations regarding facility regulations and completion of the detoxification process are well-supported by nodes 2 and 5, which specify compliance requirements. The prohibition on illegal drug use is consistently reinforced throughout the contextual nodes. Excellent alignment!",
+          "contextual_precision": "The score is 1.00 because all retrieval context nodes are relevant to the input question about rights and obligations of people undergoing drug rehabilitation. Every node in the retrieval contexts directly addresses the core topic: the first node discusses 'Bảo đảm quyền của người nghiện ma túy trong thời gian cai nghiện' (ensuring rights during rehabilitation), the second and fourth nodes cover treatment and counseling support ('tư vấn, điều trị'), the third node reinforces the rights framework, and the fifth node addresses both obligations ('Tuân thủ quy trình cai nghiện') and rights. With all nodes ranked as relevant and no irrelevant nodes present, the retrieval ranking is perfectly aligned with the input query. Excellent work!"
+        }
+      },
+      {
+        "question": "Các chất ma tuý tuyệt đối cấm sử dụng (nhóm I) gồm những chất tiêu biểu nào?",
+        "answer": "Dựa trên các nguồn đã truy xuất, câu trả lời là:\n- Đơn vị được tiến hành các hoạt động hợp pháp liên quan đến ma túy vì mục đích quốc phòng, an ninh được quy định tại Điều 23 của Nghị định này có trách nhiệm: a) Xây dựng kế hoạch tổ chức thực hiện các hoạt động bảo quản, tồn trữ, phân phối, sử dụng, xử lý, trao đổi chất ma túy, tiền chất trong cơ quan đảm bảo tuyệt đối an toàn và phải chịu trách nhiệm trước pháp luật về việc nhầm lẫn, thất thoát các chất đó; [NGHỊ ĐỊNH, legal]\n- ong cơ quan đảm bảo tuyệt đối an toàn và phải chịu trách nhiệm trước pháp luật về việc nhầm lẫn, thất thoát các chất đó; b) Chấp hành việc theo dõi, kiểm tra, giám sát của các cơ quan chức năng đối với các hoạt động bảo quản, tồn trữ, phân phối, sử dụng, xử lý, trao đổi chất ma túy, tiền chất tại cơ quan, đơn vị. [NGHỊ ĐỊNH, legal]\n- ổ chức đã được cơ quan có thẩm quyền tiến hành xác minh, làm rõ; b) Thông tin, tài liệu trong các vụ vi phạm pháp luật; c) Người có biểu hiện mất năng lực nhận thức hoặc kiểm soát hành vi nghi do sử dụng ma túy; d) Trên người, phương tiện, nơi ở của người đó có dấu vết của chất ma túy hoặc dụng cụ, phương tiện sử dụng trái phép chất ma túy; đ) Người điều khi [NGHỊ ĐỊNH, legal]\n- ển phương tiện có biểu hiện sử dụng chất kích thích nghi là ma túy; e) Người có mặt tại các địa điểm có hành vi tổ chức, chứa chấp hoặc sử dụng trái phép chất ma túy nhưng không có lý do chính đáng. [NGHỊ ĐỊNH, legal]",
+        "n_sources": 5,
+        "scores": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.0,
+          "contextual_recall": 0.0,
+          "contextual_precision": 0.0
+        },
+        "case_avg": 0.25,
+        "reasons": {
+          "faithfulness": "The score is 1.00 because the actual output contains no contradictions with the retrieval context. Excellent work!",
+          "answer_relevancy": "The score is 0.00 because the actual output completely fails to address the input question. The input asks for examples of absolutely prohibited narcotic substances in Group I, but the output instead discusses legal procedures, storage requirements, monitoring protocols, and signs of drug use—none of which identify or classify the specific prohibited substances requested. The response is entirely off-topic.",
+          "contextual_recall": "The score is 0.00 because the retrieval context does not contain any information about the specific group of absolutely banned drugs for medical and daily use mentioned in the expected output. The expected output lists heroin, cocaine, methamphetamine, MDMA, cannabis, and similar substances as absolutely prohibited drugs, but no nodes in retrieval context provide this comprehensive list or classification of banned substances.",
+          "contextual_precision": "The score is 0.00 because all retrieved nodes in the retrieval contexts are irrelevant to the input question about which substances are in the absolutely prohibited drug group (nhóm I). The first node discusses 'signs and indicators for detecting drug use' rather than listing prohibited substances. The second node contains 'a form asking about symptoms of drug use' instead of identifying specific substances. The third node is 'a news article about singer Chi Dân being arrested' which does not address the classification of prohibited drugs. The fourth and fifth nodes discuss 'legal activities related to drug storage, distribution, and use for national defense and security purposes' but do not identify or list the specific substances in group I. Since all nodes ranked in the retrieval contexts are irrelevant, contextual precision cannot be achieved."
+        }
+      },
+      {
+        "question": "Ca sĩ Miu Lê bị bắt vì hành vi gì và vào thời điểm nào?",
+        "answer": "Dựa trên các nguồn đã truy xuất, câu trả lời là:\n- # Ca sĩ Miu Lê bị bắt với cáo buộc tổ chức sử dụng ma túy **Source:** https://vnexpress.net/ca-si-miu-le-bi-bat-voi-cao-buoc-to-chuc-su-dung-ma-tuy-5074769.html **Published:** 2026-05-16 **Crawled:** 2026-06-08T15:45:49.486297 --- Ngày 16/5, Cơ quan CSĐT Công an thành phố Hải Phòng đã ra quyết định khởi tố, lệnh bắt tạm giam đối với Lê Ánh Nhật (ca sĩ Miu Lê [Ca sĩ Miu Lê bị bắt với cáo buộc tổ chức sử dụng ma túy, news]\n- *Ngoài đóng phim, cô còn là ca sĩ, nổi tiếng với bản hit *Giá như cô ấy chưa xuất hiện*, *Thầm thương trộm nhớ*, *Vì mẹ anh bắt chia tay*. [Ca sĩ Miu Lê chưa bị khởi tố trong vụ án dùng ma túy ở đảo Cát Bà, news]\n- Từ 7/5, An mời bạn bè là ca sĩ Miu Lê, Vũ Khương An và vợ chồng Trần Đức Phong - Trần Minh Trang đến chơi. [Ca sĩ Miu Lê bị bắt với cáo buộc tổ chức sử dụng ma túy, news]\n- Trên báo *Màn ảnh sân khấu* năm 2002, anh cho biết thời học phổ thông từng ôm mộng trở thành ca sĩ, song bị cha ngăn cản vì muốn con theo nghề sư phạm. [Sự nghiệp Long Nhật trước khi bị bắt vì liên quan ma túy, news]",
+        "n_sources": 5,
+        "scores": {
+          "faithfulness": 0.8,
+          "answer_relevancy": 0.4444,
+          "contextual_recall": 1.0,
+          "contextual_precision": 0.8333
+        },
+        "case_avg": 0.7694,
+        "reasons": {
+          "faithfulness": "The score is 0.80 because the actual output contains a significant factual error regarding the charges against Miu Lê. According to the retrieval context, Miu Lê was not charged with organizing illegal drug use; rather, Vũ Khương An was the one prosecuted for that charge. Miu Lê was identified as a 'beneficiary' in the case, not as someone arrested with organizing drug use charges. This misattribution of charges represents a notable deviation from the retrieval context, though the output may be largely accurate in other respects.",
+          "answer_relevancy": "The score is 0.44 because the actual output contains significant irrelevant content. While some information about Miu Lê is provided, the response includes multiple mentions of her hit songs and personal background details (childhood aspirations, family pressure) that do not address the core questions about the specific charges against her or the timing of the arrest. To improve, the response should focus directly on the arrest incident, the charges involved, and when the arrest occurred.",
+          "contextual_recall": "The score is 1.00 because all key information in the expected output is fully supported by the retrieval context. The 1st node in retrieval context confirms the singer's identity (Lê Ánh Nhật/Miu Lê), the arrest date (16/5), the arresting authority (Công an Hải Phòng), and the charges (organizing illegal drug use), while the 3rd node confirms the location (đảo Cát Bà). Perfect alignment!",
+          "contextual_precision": "The score is 0.83 because the first two relevant nodes in the retrieval contexts are correctly ranked at positions 1 and 3. The first node directly provides both the arrest date ('Ngày 16/5') and charges ('Tổ chức sử dụng trái phép chất ma túy'), making it highly relevant. The third node offers contextual details about the drug incident at Cát Bà island. However, the score is not higher because an irrelevant node appears at position 2, which only contains background information about Miu Lê's real name and career without addressing the arrest details. Additionally, irrelevant nodes at positions 4 and 5 are ranked after relevant content—position 4 discusses an unrelated singer named Long Nhật, and position 5 contains contradictory information stating 'Ca sĩ Miu Lê chưa bị khởi tố' and 'cả ba hiện chưa bị truy cứu trách nhiệm hình sự', which directly conflicts with the arrest information. These irrelevant nodes should have been ranked lower than the relevant nodes in the retrieval contexts."
+        }
+      },
+      {
+        "question": "Ca sĩ Long Nhật liên quan tới vụ án ma tuý như thế nào?",
+        "answer": "Dựa trên các nguồn đã truy xuất, câu trả lời là:\n- # Sự nghiệp Long Nhật trước khi bị bắt vì liên quan ma túy **Source:** https://vnexpress.net/su-nghiep-long-nhat-truoc-khi-bi-bat-vi-lien-quan-ma-tuy-5076081.html **Published:** 2026-05-20 **Crawled:** 2026-06-08T15:45:53.322903 --- Ngày 20/5, Công an TP HCM cho biết Đinh Long Nhật (tức ca sĩ Long Nhật, 58 tuổi) bị Phòng Cảnh sát điều tra tội phạm về mua túy (PC04) bắt về hành vi *Tổ chức sử dụng trái phép chất ma túy*. [Sự nghiệp Long Nhật trước khi bị bắt vì liên quan ma túy, news]\n- [ ](https://vov.vn/phap-luat/truy-to-ca-si-chi-dan-nguoi-mau-an-tay-co-tien-tu-thien-truc-phuong-post1280703.vov) ## VOV.VN - Ca sĩ Chi Dân, người mẫu An Tây và Nguyễn Đỗ Trúc Phương bị Viện KSND TP.HCM truy tố trong chuyên án VN10 về các tội liên quan ma túy. [Truy tố ca sĩ Chi Dân, người mẫu An Tây, \"cô tiên từ thiện\" Trúc Phương, news]\n- Ngày 2/4, Viện KSND TP.HCM vừa hoàn tất cáo trạng, truy tố 227 bị can trong chuyên án VN10 - vụ án liên quan 4 nữ tiếp viên Vietnam Airlines bị lợi dụng xách hơn 11kg ma tuý từ Pháp về Việt Nam, vào ngày 16/3/2023. [Truy tố ca sĩ Chi Dân, người mẫu An Tây, \"cô tiên từ thiện\" Trúc Phương, news]\n- Nhiều người trong nghề cho rằng sự việc Long Nhật và nhiều người nổi tiếng liên tiếp bị bắt vì vướng vào ma túy gần đây là bài học cảnh báo. [Sự nghiệp Long Nhật trước khi bị bắt vì liên quan ma túy, news]",
+        "n_sources": 5,
+        "scores": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 1.0,
+          "contextual_recall": 1.0,
+          "contextual_precision": 0.8333
+        },
+        "case_avg": 0.9583,
+        "reasons": {
+          "faithfulness": "The score is 1.00 because the actual output contains no contradictions with the retrieval context. Excellent work!",
+          "answer_relevancy": "The score is 1.00 because the actual output contains no irrelevant statements and directly addresses the input question about singer Long Nhật's involvement in the drug case. Excellent work!",
+          "contextual_recall": "The score is 1.00 because all key information in the expected output is fully supported by the retrieval context. Node 1 in retrieval context directly confirms the arrest of Đinh Long Nhật (ca sĩ Long Nhật) by Công an TP HCM and the specific charge of organizing illegal drug use, while Node 3 supports the claim that he is part of a series of artists being prosecuted for drug-related offenses. Perfect alignment!",
+          "contextual_precision": "The score is 0.83 because the relevant nodes are mostly ranked higher than irrelevant nodes, but not perfectly. The first node correctly ranks a highly relevant document that directly states 'Đinh Long Nhật (tức ca sĩ Long Nhật, 58 tuổi) bị Phòng Cảnh sát điều tra tội phạm về mua túy (PC04) bắt về hành vi Tổ chức sử dụng trái phép chất ma túy' at the top position. The third node, also relevant, is appropriately ranked after the first. However, the second node—an irrelevant document about other artists (Chi Dân, An Tây, Nguyễn Đỗ Trúc Phương) with no information about Long Nhật's involvement—is ranked second, which disrupts the ideal ordering where all relevant nodes should precede irrelevant ones. The fourth and fifth nodes, which focus on Long Nhật's music career and achievements with no drug case information, are correctly positioned at the end. The presence of this single irrelevant node in the second position prevents a perfect score."
+        }
+      },
+      {
+        "question": "Ca sĩ Chu Bin bị bắt trong hoàn cảnh nào?",
+        "answer": "Dựa trên các nguồn đã truy xuất, câu trả lời là:\n- Tháng 6/2024, ca sĩ Chu Bin bị bắt khi công an phát hiện anh cùng 5 người khác đang sử dụng ma túy tại một căn nhà ở Quận 10, TPHCM. [Sao Việt bị bắt, ngồi tù, mất danh tiếng vì chất cấm, news]\n- # Sự nghiệp Long Nhật trước khi bị bắt vì liên quan ma túy **Source:** https://vnexpress.net/su-nghiep-long-nhat-truoc-khi-bi-bat-vi-lien-quan-ma-tuy-5076081.html **Published:** 2026-05-20 **Crawled:** 2026-06-08T15:45:53.322903 --- Ngày 20/5, Công an TP HCM cho biết Đinh Long Nhật (tức ca sĩ Long Nhật, 58 tuổi) bị Phòng Cảnh sát điều tra tội phạm về mua túy (PC04) bắt về hành vi *Tổ chức sử dụng trái phép chất ma túy*. [Sự nghiệp Long Nhật trước khi bị bắt vì liên quan ma túy, news]\n- Trước khi bị bắt, nhiều năm qua, ca sĩ Long Nhật có cuộc sống kín tiếng. [Sự nghiệp Long Nhật trước khi bị bắt vì liên quan ma túy, news]\n- Ca sĩ khai tổ chức sử dụng ma túy đá cùng người giúp việc và một người quen đến chơi nhà, thừa nhận chuyển tiền nhờ người mua hàng. [Sự nghiệp Long Nhật trước khi bị bắt vì liên quan ma túy, news]",
+        "n_sources": 5,
+        "scores": {
+          "faithfulness": 0.75,
+          "answer_relevancy": 1.0,
+          "contextual_recall": 1.0,
+          "contextual_precision": 1.0
+        },
+        "case_avg": 0.9375,
+        "reasons": {
+          "faithfulness": "The score is 0.75 because the actual output claims Long Nhật lived a quiet life for many years before his arrest, but the retrieval context shows he had a public appearance at the 73rd anniversary celebration of Vietnamese Cinema Day in mid-March 2024 and organized a liveshow called 'Người con xứ Huế' in 2024, which directly contradicts the narrative of a quiet, low-profile existence.",
+          "answer_relevancy": "The score is 1.00 because the output directly and comprehensively addresses the input question about the circumstances of singer Chu Bin's arrest, with no irrelevant statements included. Excellent work!",
+          "contextual_recall": "The score is 1.00 because the entire expected output is directly supported by the 1st node in retrieval context, which provides comprehensive coverage of all key information including the arrest date (Tháng 6/2024), the person involved (ca sĩ Chu Bin), the circumstances (sử dụng ma túy), and the location (TP HCM). Excellent alignment!",
+          "contextual_precision": "The score is 1.00 because the retrieval contexts demonstrate perfect ranking precision. The first node in the retrieval context directly answers the input question by stating 'Tháng 6/2024, ca sĩ Chu Bin bị bắt khi công an phát hiện anh cùng 5 người khác đang sử dụng ma túy tại một căn nhà ở Quận 10, TPHCM,' providing the exact circumstances of Chu Bin's arrest. All four irrelevant nodes (ranks 2-5) are appropriately ranked lower, as they discuss other artists' arrests (Long Nhật and Chi Dân) or unrelated career information, none of which address the specific question about Chu Bin's arrest circumstances. Excellent retrieval ranking!"
+        }
+      },
+      {
+        "question": "Diễn viên hài Hiệp Gà từng bị xử lý về ma tuý ra sao?",
+        "answer": "Dựa trên các nguồn đã truy xuất, câu trả lời là:\n- Tháng 4/2007, diễn viên hài Hiệp Gà bị công an phường Phương Liên, Hà Nội bắt quả tang tàng trữ heroin. [Sao Việt bị bắt, ngồi tù, mất danh tiếng vì chất cấm, news]\n- Từ một nghệ sĩ hài nổi tiếng với *Gặp nhau cuối tuần*, sau khi ra tù Hiệp Gà chỉ còn có thể tham gia các tiểu phẩm hài, phim ngắn chiếu trên mạng hoặc diễn ở các tụ điểm giải trí để mưu sinh. [Sao Việt bị bắt, ngồi tù, mất danh tiếng vì chất cấm, news]\n- Sáng 11/6/2022, Công an Phường 5, Quận 8 (cũ) kiểm tra hành chính căn hộ tại chung cư Giai Việt, bắt quả tang diễn viên hài Hữu Tín cùng nhóm bạn đang sử dụng ma túy. [Sao Việt bị bắt, ngồi tù, mất danh tiếng vì chất cấm, news]\n- Trước đó không lâu, ngày 23/4/2023, nữ diễn viên Lệ Hằng - từng nổi tiếng qua các phim truyền hình *Xin hãy tin em* bị khởi tố vì mua bán trái phép chất ma túy. [Sao Việt bị bắt, ngồi tù, mất danh tiếng vì chất cấm, news]",
+        "n_sources": 5,
+        "scores": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.6,
+          "contextual_recall": 1.0,
+          "contextual_precision": 1.0
+        },
+        "case_avg": 0.9,
+        "reasons": {
+          "faithfulness": "The score is 1.00 because the actual output contains no contradictions with the retrieval context. Excellent work!",
+          "answer_relevancy": "The score is 0.60 because the output contains significant irrelevant information about other individuals (comedian Hữu Tín and actress Lệ Hằng) instead of focusing exclusively on Hiệp Gà's drug-related legal case. While some relevant content about the actual subject may be present, the inclusion of unrelated statements substantially dilutes the answer's relevancy to the specific question asked.",
+          "contextual_recall": "The score is 1.00 because all information in the expected output is fully supported by the retrieval context. Nodes 1 and 2 in retrieval context comprehensively confirm the statement about comedian Hiệp Gà's drug-related arrest, with node 1 providing specific details about the April 2007 arrest for heroin possession in Hà Nội, and node 2 corroborating the conviction for illegal drug possession. Excellent retrieval!",
+          "contextual_precision": "The score is 1.00 because all relevant nodes in the retrieval contexts are ranked higher than irrelevant nodes. The first four nodes are all ranked at positions 1-4 and contain direct information about Hiệp Gà's drug case, including specific details such as 'Tháng 4/2007, diễn viên hài Hiệp Gà bị công an phường Phương Liên, Hà Nội bắt quả tang tàng trữ heroin' and 'Ngày 31/7/2007, TAND quận Đống Đa tuyên phạt Hiệp Gà 24 tháng tù giam về tội tàng trữ trái phép chất ma túy.' The only irrelevant node, which discusses other celebrities' drug cases and 'does not provide any information about Hiệp Gà's drug case,' is appropriately ranked last at position 5. Perfect ranking!"
+        }
+      },
+      {
+        "question": "Hệ quả sự nghiệp với các nghệ sĩ Việt khi vướng vào ma tuý là gì?",
+        "answer": "Dựa trên các nguồn đã truy xuất, câu trả lời là:\n- Nhiều người trong nghề cho rằng sự việc Long Nhật và nhiều người nổi tiếng liên tiếp bị bắt vì vướng vào ma túy gần đây là bài học cảnh báo. [Sự nghiệp Long Nhật trước khi bị bắt vì liên quan ma túy, news]\n- Nghệ sĩ Ưu tú Hạnh Thúy cho biết chứng kiến nhiều người lụn bại sự nghiệp sau khi sử dụng chất cấm, không ai dám hợp tác. [Sự nghiệp Long Nhật trước khi bị bắt vì liên quan ma túy, news]\n- nhất ca sĩ xuất hiện trước đồng nghiệp, công chúng là ở lễ kỷ niệm 73 năm Ngày điện ảnh Việt Nam giữa tháng 3 ở Hà Nội. [Sự nghiệp Long Nhật trước khi bị bắt vì liên quan ma túy, news]\n- Ca sĩ mời nhiều đồng nghiệp hát chung, như nghệ sĩ Thu Hiền, Vân Khánh, Ngọc Đợi, ca sĩ Ngọc Ánh, ôn lại một chặng đường ca hát. [Sự nghiệp Long Nhật trước khi bị bắt vì liên quan ma túy, news]",
+        "n_sources": 5,
+        "scores": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.5,
+          "contextual_recall": 1.0,
+          "contextual_precision": 0.8042
+        },
+        "case_avg": 0.826,
+        "reasons": {
+          "faithfulness": "The score is 1.00 because the actual output contains no contradictions with the retrieval context. Excellent work!",
+          "answer_relevancy": "The score is 0.50 because the output contains significant irrelevant content. While some information about Vietnamese artists and drugs may be present, approximately half of the response discusses unrelated details such as a singer's appearance at a cinema event and invitations to perform at events. These statements do not address the core question about career consequences for Vietnamese artists involved with drugs. To improve the score, the response should focus exclusively on the actual career impacts and consequences rather than tangential anecdotes.",
+          "contextual_recall": "The score is 1.00 because all aspects of the expected output are comprehensively supported by the retrieval context. Nodes 1, 3, 4, and 5 in retrieval context collectively cover the consequences of drug involvement: career decline and loss of reputation (nodes 1 and 3), arrest and prosecution (node 4), and inability to continue artistic activities (node 5). The expected output is fully attributable to the provided context.",
+          "contextual_precision": "The score is 0.80 because the retrieval contexts demonstrate strong overall relevance with mostly relevant nodes ranked at the top. The first node (rank 1) directly addresses career collapse with the quote 'Nghệ sĩ Ưu tú Hạnh Thúy cho biết chứng kiến nhiều người lụn bại sự nghiệp sau khi sử dụng chất cấm' (many people's careers collapsed after using banned substances), and the third node (rank 3) explicitly states 'Cái giá của một lần sa ngã là sự nghiệp lao đao, danh dự và sự tự do bị ảnh hưởng nặng nề' (The price of a fall is a ruined career, damaged reputation and severely affected freedom). However, the score is not higher because an irrelevant node discussing Long Nhật's 2024 liveshow and musical performances is positioned at rank 2, disrupting the ideal ranking where all relevant nodes should appear before irrelevant ones. Additionally, the fifth node (rank 5) focuses more on scandals and controversies rather than directly addressing drug-related career consequences, which slightly weakens the overall contextual precision."
+        }
+      },
+      {
+        "question": "Thủ đô của nước Pháp tên là gì?",
+        "answer": "Dựa trên các nguồn đã truy xuất, câu trả lời là:\n- ang các nước tham gia Điều 12 Công ước năm 1988 của Liên hợp quốc về chống buôn bán bất hợp pháp các chất ma túy và các chất hướng thần), bao gồm cả dạng đơn chất và dạng phối hợp; Trong thời hạn chậm nhất là 03 ngày làm việc, kể từ ngày nhận được đơn và hồ sơ đề nghị cấp giấy phép xuất khẩu hợp lệ, cơ quan có thẩm quyền cấp phép có trách nhiệm gửi Bộ Công a [CHÍNH PHỦ CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM, legal]\n- n những thông tin về tên, địa chỉ tổ chức đề nghị cấp phép xuất khẩu; tên gọi, hàm lượng, số lượng tiền chất; tên, địa chỉ tổ chức nhập khẩu; tên cửa khẩu có hàng xuất khẩu đi qua để ra thông báo tiền xuất khẩu đối với lô hàng cho cơ quan chức năng của nước nhập khẩu. [CHÍNH PHỦ CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM, legal]\n- quốc về chống buôn bán bất hợp pháp các chất ma túy và các chất hướng thần), bao gồm cả dạng đơn chất và dạng phối hợp; Trong thời hạn chậm nhất là 03 ngày làm việc, kể từ ngày nhận được đơn và hồ sơ đề nghị cấp giấy phép xuất khẩu hợp lệ, cơ quan có thẩm quyền cấp phép có trách nhiệm gửi Bộ Công an những thông tin về tên, địa chỉ tổ chức đề nghị cấp phép xu [NGHỊ ĐỊNH, legal]\n- ất khẩu; tên gọi, hàm lượng, số lượng tiền chất; tên, địa chỉ tổ chức nhập khẩu; tên cửa khẩu có hàng xuất khẩu đi qua để ra thông báo tiền xuất khẩu đối với lô hàng cho cơ quan chức năng của nước nhập khẩu. [NGHỊ ĐỊNH, legal]",
+        "n_sources": 5,
+        "scores": {
+          "faithfulness": 0.75,
+          "answer_relevancy": 0.0,
+          "contextual_recall": 1.0,
+          "contextual_precision": null
+        },
+        "case_avg": 0.5833,
+        "reasons": {
+          "faithfulness": "The score is 0.75 because the actual output conflates two distinct concepts from the retrieval context. While the 1988 UN Convention does address illegal trafficking of drugs and psychotropic substances, the output incorrectly links drug precursors (which can exist in single substance and combined forms) to countries participating in Article 12 in a way that is not supported by the context. The retrieval context does not establish that countries participating in the convention include provisions specifically addressing 'single substance and combined forms' of precursors in the manner claimed.",
+          "answer_relevancy": "The score is 0.00 because the actual output is entirely irrelevant to the input question, which asks for the capital of France in Vietnamese. Instead of providing the straightforward answer 'Paris' (or 'Paris' in French), the output discusses UN conventions on narcotic drugs, export licensing procedures, customs regulations, and pre-export notifications—topics that have absolutely no connection to the question being asked.",
+          "contextual_recall": "The score is 1.00 because the expected output is perfectly supported by the retrieval context. Nodes 1, 2, 4, and 5 in retrieval context contain comprehensive information about drug-related laws and regulations, confirming that the corpus does cover drug law topics as stated in the output. Additionally, the absence of artist news content across all retrieval nodes validates the claim that the question falls outside the corpus scope, making the response entirely accurate and well-supported.",
+          "contextual_precision": "ERROR: Evaluation LLM outputted an invalid JSON. Please use a better evaluation model."
+        }
+      }
+    ]
+  },
+  {
+    "config_name": "hybrid_no_rerank",
+    "aggregate": {
+      "faithfulness": 0.9098,
+      "answer_relevancy": 0.6265,
+      "contextual_recall": 0.7667,
+      "contextual_precision": 0.5114,
+      "overall": 0.7036
+    },
+    "per_case": [
+      {
+        "question": "Hình phạt cho tội tàng trữ trái phép chất ma tuý theo Điều 249 Bộ luật Hình sự?",
+        "answer": "Dựa trên các nguồn đã truy xuất, câu trả lời là:\n- ướp giật tài sản); Điều 248 (tội sản xuất trái phép chất ma túy); Điều 249 (tội tàng trữ trái phép chất ma túy); Điều 250 (tội vận chuyển trái phép chất ma túy); Điều 251 (tội mua bán trái phép chất ma túy); Điều 252 (tội chiếm đoạt chất ma túy) của Bộ luật này; [BỘ LUẬT HÌNH SỰ, legal]\n- phép chất ma túy); Điều 249 (tội tàng trữ trái phép chất ma túy); Điều 250 (tội vận chuyển trái phép chất ma túy); Điều 251 (tội mua bán trái phép chất ma túy); Điều 252 (tội chiếm đoạt chất ma túy) của Bộ luật này; c) Người dưới 18 tuổi là người đồng phạm nhưng có vai trò không đáng kể trong vụ án. [BỘ LUẬT HÌNH SỰ, legal]\n- Ở vụ án này, người mẫu An Tây bị truy tố về hai tội \"Tàng trữ trái phép chất ma túy\" và \"Tổ chức sử dụng trái phép chất ma túy\" quy định tại điểm i khoản 1 Điều 249 và điểm a, b khoản 2 Điều 255 Bộ luật Hình sự năm 2015 (sửa đổi, bổ sung năm 2017). [Vụ án liên quan ca sĩ Chi Dân: Vì sao người mẫu An Tây bị truy tố?, news]\n- iều 29 của Bộ luật này, thì có thể được miễn trách nhiệm hình sự và áp dụng các biện pháp quy định tại Mục 2 Chương này: a) Người từ đủ 16 tuổi đến dưới 18 tuổi phạm tội ít nghiêm trọng, phạm tội nghiêm trọng, trừ trường hợp quy định tại Điều 134 (tội cố ý gây thương tích hoặc gây tổn hại cho sức khỏe của người khác); Điều 141 (tội hiếp dâm); Điều 171 (tội c [BỘ LUẬT HÌNH SỰ, legal]",
+        "n_sources": 5,
+        "scores": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.9,
+          "contextual_recall": 0.5,
+          "contextual_precision": 0.3333
+        },
+        "case_avg": 0.6833,
+        "reasons": {
+          "faithfulness": "The score is 1.00 because the actual output contains no contradictions with the retrieval context. Excellent work!",
+          "answer_relevancy": "The score is 0.90 because the response directly addresses the penalties for illegal drug possession under Article 249 of the Criminal Code. However, it includes a reference to Article 252 regarding drug seizure, which is not directly relevant to the specific question about Article 249 penalties, preventing a perfect score.",
+          "contextual_recall": "The score is 0.50 because the retrieval context in node 3 supports the main penalty framework for illegal drug possession without intent to sell, transport, or produce (1-5 years imprisonment), but lacks critical information about how penalties escalate based on quantity and circumstances, as well as the maximum penalty of life imprisonment mentioned in the expected output.",
+          "contextual_precision": "The score is 0.33 because only 1 out of 5 retrieval contexts nodes is relevant to the input question about penalties for illegal drug possession under Điều 249. While the third node correctly provides penalty information stating 'phạt tù từ 03 năm đến 05 năm', the first, second, fourth, and fifth nodes are irrelevant as they either discuss exemptions for minors, reference the law in unrelated contexts, or present specific case examples without general penalty information. The contextual precision score is not higher because multiple irrelevant nodes are ranked before and after the single relevant node, indicating poor ranking quality. The score remains at 0.33 rather than lower because the relevant node does appear in the retrieval contexts and contains substantive penalty information, even though it is not optimally positioned among predominantly irrelevant results."
+        }
+      },
+      {
+        "question": "Luật Phòng chống ma tuý 2021 quy định những hình thức cai nghiện nào?",
+        "answer": "Dựa trên các nguồn đã truy xuất, câu trả lời là:\n- dụng biện pháp xử lý hành chính đưa vào cơ sở cai nghiện bắt buộc; 34 CÔNG BÁO/Số 567 + 568/Ngày 30-4-2021 c) Người đang chấp hành quyết định cai nghiện ma túy bắt buộc tại cộng đồng theo quy định của Luật Phòng, chống ma túy số 23/2000/QH10 đã được sửa đổi, bổ sung một số điều theo Luật số 16/2008/QH12 thì được đăng ký cai nghiện tự nguyện theo quy định của Luật này. [4, legal]\n- y; 26 CÔNG BÁO/Số 567 + 568/Ngày 30-4-2021 d) Người đứng đầu cơ sở cai nghiện ma túy có trách nhiệm bảo đảm điều kiện hoạt động của cơ sở cai nghiện ma túy; niêm yết công khai chi phí liên quan đến cai nghiện ma túy tại cơ sở theo quy định của pháp luật; đ) Phòng, chống thẩm lậu ma túy vào cơ sở; e) Bố trí các khu hoặc phòng riêng khi tiếp nhận các đối tượng [4, legal]\n- Phạm vi điều chỉnh Luật này quy định về phòng, chống ma túy; quản lý người sử dụng trái phép chất ma túy; cai nghiện ma túy; trách nhiệm của cá nhân, gia đình, cơ quan, tổ chức trong phòng, chống ma túy; quản lý nhà nước và hợp tác quốc tế về phòng, chống ma túy. [4, legal]\n- c sửa đổi, bổ sung một số điều theo Luật số 16/2008/QH12 và bị quản lý sau cai nghiện ma túy theo quy định của Luật này; b) Người đang bị quản lý sau cai nghiện ma túy thì tiếp tục chấp hành quyết định quản lý sau cai nghiện ma túy đến hết thời hạn quản lý sau cai nghiện theo quy định của Luật Phòng, chống ma túy số 23/2000/QH10 đã được sửa đổi, bổ sung một số điều theo Luật số 16/2008/QH12. [4, legal]",
+        "n_sources": 5,
+        "scores": {
+          "faithfulness": 0.8571,
+          "answer_relevancy": 1.0,
+          "contextual_recall": 0.6667,
+          "contextual_precision": 0.0
+        },
+        "case_avg": 0.631,
+        "reasons": {
+          "faithfulness": "The score is 0.86 because the actual output overstates the scope of the law by claiming it regulates 'state management and international cooperation on drug prevention and control,' when the retrieval context only confirms it regulates drug prevention and control, management of people using illegal drugs, drug addiction treatment, and responsibilities of individuals, families, agencies, and organizations. The addition of 'international cooperation' as a regulated aspect is not supported by the provided context.",
+          "answer_relevancy": "The score is 1.00 because the response directly and comprehensively addresses the input question about the forms of drug addiction treatment regulated by the 2021 Anti-Drug Law, with no irrelevant statements included. Excellent work!",
+          "contextual_recall": "The score is 0.67 because the retrieval context in nodes 1 and 2 supports the distinction between two types of drug rehabilitation (voluntary and compulsory) and confirms that compulsory rehabilitation occurs at public facilities. However, the context lacks explicit information about the specific locations where voluntary rehabilitation is implemented (at home, community, or rehabilitation facilities), which represents a significant gap in supporting the complete expected output.",
+          "contextual_precision": "The score is 0.00 because all five nodes in the retrieval contexts are irrelevant to the input question about the forms of drug rehabilitation defined in the 2021 Drug Prevention and Control Law. The first node mentions 'cai nghiện bắt buộc' but lacks comprehensive coverage; the second node focuses on operational management rather than defining rehabilitation forms; the third node only provides general provisions without specifying rehabilitation forms; the fourth node references rehabilitation types but fails to clearly state the main forms; and the fifth node discusses research responsibilities rather than the actual defined forms. Since no relevant nodes were retrieved, contextual precision cannot be achieved, resulting in a score of 0.00."
+        }
+      },
+      {
+        "question": "Tội sản xuất trái phép chất ma tuý bị xử lý thế nào theo Điều 248?",
+        "answer": "Dựa trên các nguồn đã truy xuất, câu trả lời là:\n- mua bán người dưới 16 tuổi); Điều 168 (tội cướp tài sản); Điều 171 (tội cướp giật tài sản); Điều 248 (tội sản xuất trái phép chất ma túy); Điều 249 (tội tàng trữ trái phép chất ma túy); Điều 250 (tội vận chuyển trái phép chất ma túy); Điều [BỘ LUẬT HÌNH SỰ, legal]\n- i phạm quy định về đầu tư công trình xây dựng gây hậu quả nghiêm trọng); Điều 243, các khoản 2 và 3 (tội hủy hoại rừng); e) Điều 248 (tội sản xuất trái phép chất ma túy); Điều 249 (tội tàng trữ trái phép chất ma túy); Điều 250 (tội vận chuyển trái phép chất ma túy); Điều 251 (tội mua bán trái phép chất ma túy); Điều 252 (tội chiếm đoạt chất ma túy); Điều 253 [BỘ LUẬT HÌNH SỰ, legal]\n- (tội tàng trữ, vận chuyển, mua bán hoặc chiếm đoạt tiền chất dùng vào việc sản xuất trái phép chất ma túy); Điều 254, khoản 2 (tội sản xuất, tàng trữ, vận chuyển hoặc mua bán phương tiện, dụng cụ dùng vào việc sản xuất hoặc sử dụng trái phép chất ma túy); Điều 255 (tội tổ chức sử dụng trái phép chất ma túy); Điều 256 (tội chứa chấp việc [BỘ LUẬT HÌNH SỰ, legal]\n- các điều sau đây: a) Điều 143 (tội cưỡng dâm); Điều 150 (tội mua bán người); Điều 151 (tội mua bán người dưới 16 tuổi); b) Điều 170 (tội cưỡng đoạt tài sản); Điều 171 (tội cướp giật tài sản); Điều 173 (tội trộm cắp tài sản); Điều 178 (tội hủy hoại hoặc cố ý làm hư hỏng tài sản); c) Điều 248 (tội sản xuất trái phép chất ma túy); Điều 249 (tội tàng trữ trái ph [BỘ LUẬT HÌNH SỰ, legal]",
+        "n_sources": 5,
+        "scores": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.5,
+          "contextual_recall": 1.0,
+          "contextual_precision": null
+        },
+        "case_avg": 0.8333,
+        "reasons": {
+          "faithfulness": "The score is 1.00 because the actual output contains no contradictions with the retrieval context. Excellent work!",
+          "answer_relevancy": "The score is 0.50 because the output contains numerous irrelevant article references (Articles 168, 171, 243, 143, 150, 151, 170, 173, 178) that address crimes like robbery, snatching, forest destruction, rape, human trafficking, extortion, theft, and property damage—none of which relate to illegal drug manufacturing under Article 248. While the output may have included some relevant information about Article 248 itself, the substantial inclusion of unrelated legal provisions significantly dilutes the relevancy and usefulness of the response to the specific question asked.",
+          "contextual_recall": "The score is 1.00 because the expected output is fully supported by the retrieval context. The entire statement about penalties for illegal drug production is directly attributed to node 4 in retrieval context, which contains Article 248 of the relevant legal code. All key information—including the base sentence of 2 to 7 years and the mention of aggravating circumstances—is present in the retrieved material.",
+          "contextual_precision": "ERROR: Evaluation LLM outputted an invalid JSON. Please use a better evaluation model."
+        }
+      },
+      {
+        "question": "Tội mua bán trái phép chất ma tuý theo Điều 251 có khung hình phạt cao nhất là gì?",
+        "answer": "Dựa trên các nguồn đã truy xuất, câu trả lời là:\n- ép chất ma túy); Điều 250 (tội vận chuyển trái phép chất ma túy); Điều 251 (tội mua bán trái phép chất ma túy); Điều 252 (tội chiếm đoạt chất ma túy); d) Điều 265 (tội tổ chức đua xe trái phép); Điều 266 (tội đua xe trái phép); [BỘ LUẬT HÌNH SỰ, legal]\n- i phạm quy định về đầu tư công trình xây dựng gây hậu quả nghiêm trọng); Điều 243, các khoản 2 và 3 (tội hủy hoại rừng); e) Điều 248 (tội sản xuất trái phép chất ma túy); Điều 249 (tội tàng trữ trái phép chất ma túy); Điều 250 (tội vận chuyển trái phép chất ma túy); Điều 251 (tội mua bán trái phép chất ma túy); Điều 252 (tội chiếm đoạt chất ma túy); Điều 253 [BỘ LUẬT HÌNH SỰ, legal]\n- các điều sau đây: a) Điều 143 (tội cưỡng dâm); Điều 150 (tội mua bán người); Điều 151 (tội mua bán người dưới 16 tuổi); b) Điều 170 (tội cưỡng đoạt tài sản); Điều 171 (tội cướp giật tài sản); Điều 173 (tội trộm cắp tài sản); Điều 178 (tội hủy hoại hoặc cố ý làm hư hỏng tài sản); c) Điều 248 (tội sản xuất trái phép chất ma túy); Điều 249 (tội tàng trữ trái ph [BỘ LUẬT HÌNH SỰ, legal]\n- Người nào tàng trữ trái phép chất ma túy mà không nhằm mục đích mua bán, vận chuyển, sản xuất trái phép chất ma túy thuộc một trong các trường hợp sau đây, thì bị phạt tù từ 03 năm đến 05 năm: a) Đã bị xử phạt vi phạm hành chính về hành vi quy định tại Điều này hoặc đã bị kết án về tội này hoặc một trong các tội quy định tại các điều 248, 250, 251, 252 và [151, legal]",
+        "n_sources": 5,
+        "scores": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.4118,
+          "contextual_recall": 0.0,
+          "contextual_precision": 0.0
+        },
+        "case_avg": 0.3529,
+        "reasons": {
+          "faithfulness": "The score is 1.00 because the actual output contains no contradictions with the retrieval context. Excellent work!",
+          "answer_relevancy": "The score is 0.41 because the actual output contains extensive irrelevant content covering multiple unrelated crimes (illegal racing, forest destruction, rape, human trafficking, extortion, theft, property damage, etc.) when the input specifically asks only about the maximum penalty for illegal drug trading under Article 251. While some relevant information may be present, the majority of the response addresses crimes unrelated to the question, significantly reducing relevancy.",
+          "contextual_recall": "The score is 0.00 because the retrieval context in node(s) in retrieval context does not contain information about the maximum penalties of 20 years imprisonment, life imprisonment, or death sentence for illegal drug trafficking. While the context mentions penalties of 2-7 years for basic cases and 7-15 years for aggravated cases under Article 251, it fails to address the highest penalties specified in sentence 1 of the expected output.",
+          "contextual_precision": "The score is 0.00 because no relevant nodes were ranked higher than irrelevant nodes. The first node in the retrieval context mentions Điều 251 but 'does not provide the specific penalties or maximum sentences for this offense.' The second node is ranked second and while it 'directly addresses the question by providing the penalty framework for Điều 251' with specific sentences, it is only partially relevant as it 'does not mention the highest penalties of 20 years, life imprisonment, or death sentence.' The remaining nodes (ranked 3rd, 4th, and 5th) are all irrelevant, with each 'does not provide the specific penalty information' or 'does not provide the penalty framework for Điều 251 itself.' Since the most relevant node (the partial match) is not ranked first, and the completely irrelevant nodes occupy the top and lower positions, the retrieval ranking fails to prioritize relevant information, resulting in zero contextual precision."
+        }
+      },
+      {
+        "question": "Tội tổ chức sử dụng trái phép chất ma tuý được quy định ở điều nào và phạt ra sao?",
+        "answer": "Dựa trên các nguồn đã truy xuất, câu trả lời là:\n- (32 tuổi, ngụ TP.HCM - thường được gọi là “cô tiên từ thiện\") bị truy tố về tội “tổ chức sử dụng trái phép chất ma tuý”. [Truy tố ca sĩ Chi Dân, người mẫu An Tây, \"cô tiên từ thiện\" Trúc Phương, news]\n- Theo cáo trạng, bị can Hoàng Sỹ Thắng cùng đồng phạm bị truy tố về hàng loạt tội danh gồm: Vận chuyển, mua bán, tàng trữ trái phép chất ma túy; tổ chức sử dụng trái phép chất ma túy; không tố giác tội phạm; che giấu tội phạm; chiếm giữ trái phép tài sản; sử dụng tài liệu giả của cơ quan, tổ chức. [Truy tố ca sĩ Chi Dân, người mẫu An Tây, \"cô tiên từ thiện\" Trúc Phương, news]\n- Andrea Aybar (tên Việt là Nguyễn Thị An hay còn gọi là An Tây, 31 tuổi, quốc tịch Tây Ban Nha, là người mẫu, diễn viên) bị khởi tố, tạm giam về tội danh như 2 người trên và thêm tội “Tàng trữ trái phép chất ma tuý”. [Truy tố ca sĩ Chi Dân, người mẫu An Tây, \"cô tiên từ thiện\" Trúc Phương, news]\n- Trong thời hạn 03 ngày làm việc, kể từ ngày nhận được thông báo về hành vi sử dụng trái phép chất ma túy và kết quả xét nghiệm chất ma túy trong cơ thể, Chủ tịch Ủy ban nhân dân cấp xã nơi người sử dụng trái phép chất ma túy cư trú ổn định hoặc nơi phát hiện hành vi sử dụng trái phép chất ma túy đối với người không có nơi cư trú ổn định ra quyết định và tổ c [NGHỊ ĐỊNH, legal]",
+        "n_sources": 5,
+        "scores": {
+          "faithfulness": 0.75,
+          "answer_relevancy": 0.75,
+          "contextual_recall": 0.5,
+          "contextual_precision": 0.0
+        },
+        "case_avg": 0.5,
+        "reasons": {
+          "faithfulness": "The score is 0.75 because while the actual output correctly identifies Andrea Aybar's charges regarding illegal drug use and illegal drug possession, it contains a factual error stating she is 32 years old when the retrieval context confirms she is 31 years old. Additionally, the output makes an unsupported claim that her charges are 'the same as the two people mentioned above,' which is not explicitly stated in the retrieval context.",
+          "answer_relevancy": "The score is 0.75 because while the response addresses procedural handling of drug-related cases, it fails to directly answer the specific legal question about which article defines the crime of organizing illegal drug use and what the corresponding penalties are. The response contains procedural information that, while related to drug cases, doesn't directly address the statutory provision or punishment framework requested in the input.",
+          "contextual_recall": "The score is 0.50 because while the general crime description 'tổ chức sử dụng trái phép chất ma túy' (organizing illegal drug use) is supported by nodes in retrieval context, the critical legal details are missing. Specifically, the reference to 'Điều 255 Bộ luật Hình sự' (Article 255 of the Criminal Code) and the exact penalty framework 'phạt tù khởi điểm từ 2 đến 7 năm, tăng nặng theo tình tiết có thể đến tù chung thân' (2 to 7 years imprisonment, escalating to life imprisonment) cannot be attributed to any nodes in retrieval context. The retrieval context appears to contain case details and procedures rather than the specific sentencing guidelines needed to fully support the expected output.",
+          "contextual_precision": "The score is 0.00 because all nodes in the retrieval contexts are irrelevant to the input query. The input asks for the specific article number and penalties for the crime of organizing illegal drug use. However, the first and second nodes mention the crime but lack the required article number and penalty details. The third, fourth, and fifth nodes discuss Điều 42, which pertains to administrative procedures for drug users rather than the criminal law provisions needed to answer the question. Since no relevant nodes were retrieved, the contextual precision score reflects a complete failure to rank relevant information higher than irrelevant information."
+        }
+      },
+      {
+        "question": "Tội vận chuyển trái phép chất ma tuý theo Điều 250 khác gì với tội tàng trữ?",
+        "answer": "Dựa trên các nguồn đã truy xuất, câu trả lời là:\n- i phạm quy định về đầu tư công trình xây dựng gây hậu quả nghiêm trọng); Điều 243, các khoản 2 và 3 (tội hủy hoại rừng); e) Điều 248 (tội sản xuất trái phép chất ma túy); Điều 249 (tội tàng trữ trái phép chất ma túy); Điều 250 (tội vận chuyển trái phép chất ma túy); Điều 251 (tội mua bán trái phép chất ma túy); Điều 252 (tội chiếm đoạt chất ma túy); Điều 253 [BỘ LUẬT HÌNH SỰ, legal]\n- (tội tàng trữ, vận chuyển, mua bán hoặc chiếm đoạt tiền chất dùng vào việc sản xuất trái phép chất ma túy); Điều 254, khoản 2 (tội sản xuất, tàng trữ, vận chuyển hoặc mua bán phương tiện, dụng cụ dùng vào việc sản xuất hoặc sử dụng trái phép chất ma túy); Điều 255 (tội tổ chức sử dụng trái phép chất ma túy); Điều 256 (tội chứa chấp việc [BỘ LUẬT HÌNH SỰ, legal]\n- mua bán người dưới 16 tuổi); Điều 168 (tội cướp tài sản); Điều 171 (tội cướp giật tài sản); Điều 248 (tội sản xuất trái phép chất ma túy); Điều 249 (tội tàng trữ trái phép chất ma túy); Điều 250 (tội vận chuyển trái phép chất ma túy); Điều [BỘ LUẬT HÌNH SỰ, legal]\n- ướp giật tài sản); Điều 248 (tội sản xuất trái phép chất ma túy); Điều 249 (tội tàng trữ trái phép chất ma túy); Điều 250 (tội vận chuyển trái phép chất ma túy); Điều 251 (tội mua bán trái phép chất ma túy); Điều 252 (tội chiếm đoạt chất ma túy) của Bộ luật này; [BỘ LUẬT HÌNH SỰ, legal]",
+        "n_sources": 5,
+        "scores": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.4615,
+          "contextual_recall": 1.0,
+          "contextual_precision": 0.2
+        },
+        "case_avg": 0.6654,
+        "reasons": {
+          "faithfulness": "The score is 1.00 because the actual output contains no contradictions with the retrieval context. Excellent work!",
+          "answer_relevancy": "The score is 0.46 because the output includes substantial irrelevant content. While it likely addresses the core question about the difference between illegal drug transportation (Article 250) and drug possession crimes, it dilutes relevancy by including multiple unrelated articles (243 on forest destruction, 168 and 171 on robbery/snatching, public construction violations) and tangentially related procedural matters (Articles 252, 255, 256). To improve, focus exclusively on comparing the substantive legal distinctions between these two specific drug crimes.",
+          "contextual_recall": "The score is 1.00 because all key claims in the expected output are fully supported by the retrieval context. Nodes 1, 2, and 4 directly confirm that Article 250 addresses illegal drug transportation, while node 5 provides the complete legal text of both Article 249 (on illegal drug storage) and Article 250, enabling clear verification of the distinction that Article 250 specifically handles drug transportation without intent for production or sale, whereas Article 249 covers storage—with the key difference being the movement of drugs from one location to another. Excellent retrieval coverage!",
+          "contextual_precision": "The score is 0.20 because only the fifth node in the retrieval contexts is relevant, appearing at the bottom of the ranking. The first four nodes are irrelevant, as they either list Điều 250 without explaining distinctions or discuss drug-related offenses without addressing the specific difference between vận chuyển (transportation) and tàng trữ (storage). The fifth node provides the definition of tàng trữ as 'tàng trữ trái phép chất ma túy mà không nhằm mục đích mua bán, vận chuyển, sản xuất trái phép chất ma túy,' which helps establish context for understanding the distinction, but the irrelevant nodes should have been ranked lower than this relevant node to achieve better contextual precision."
+        }
+      },
+      {
+        "question": "Nghị định 105/2021/NĐ-CP hướng dẫn những nội dung gì của Luật Phòng chống ma tuý?",
+        "answer": "Dựa trên các nguồn đã truy xuất, câu trả lời là:\n- CHÍNH PHỦ CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM ------- Độc lập - Tự do - Hạnh phúc --------------- Số: 105/2021/NĐ-CP Hà Nội, ngày 04 tháng 12 năm 2021 NGHỊ ĐỊNH QUY ĐỊNH CHI TIẾT VÀ HƯỚNG DẪN THI HÀNH MỘT SỐ ĐIỀU CỦA LUẬT PHÒNG, CHỐNG MA TÚY Căn cứ Luật Tổ chức Chính phủ ngày 19 tháng 6 năm 2015; Luật sửa đổi, bổ sung một số điều của Luật Tổ chức Chính phủ và [CHÍNH PHỦ CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM, legal]\n- Luật Tổ chức chính quyền địa phương ngày 22 tháng 11 năm 2019; Căn cứ Luật Phòng, chống ma túy ngày 30 tháng 3 năm 2021; Theo đề nghị của Bộ trưởng Bộ Công an; Chính phủ ban hành Nghị định quy định chi tiết và hướng dẫn thi hành một số điều của Luật Phòng, chống ma túy. [CHÍNH PHỦ CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM, legal]\n- Chương I QUY ĐỊNH CHUNG Điều 1. [CHÍNH PHỦ CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM, legal]\n- 6 năm 2015; Luật sửa đổi, bổ sung một số điều của Luật Tổ chức Chính phủ và Luật Tổ chức chính quyền địa phương ngày 22 tháng 11 năm 2019; Căn cứ Luật Phòng, chống ma túy ngày 30 tháng 3 năm 2021; Căn cứ Nghị định số ........../2021/NĐ-CP ngày ... [CHÍNH PHỦ CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM, legal]",
+        "n_sources": 5,
+        "scores": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 1.0,
+          "contextual_recall": 0.6,
+          "contextual_precision": 1.0
+        },
+        "case_avg": 0.9,
+        "reasons": {
+          "faithfulness": "The score is 1.00 because the actual output contains no contradictions with the retrieval context. Excellent work!",
+          "answer_relevancy": "The score is 1.00 because the response directly and comprehensively addresses the input question about what content Decree 105/2021/NĐ-CP provides guidance on regarding the Law on Drug Prevention and Control. There are no irrelevant statements detracting from the answer's quality.",
+          "contextual_recall": "The score is 0.60 because the retrieval context in nodes 1-5 successfully supports the identification of Nghị định 105/2021/NĐ-CP and its primary purpose of detailing the Drug Prevention and Control Law, as well as the management of illegal drug users. However, two significant components of the expected output lack support in the retrieval context: the explicit mention of 'kiểm soát hoạt động hợp pháp liên quan đến ma túy' (control of legal drug-related activities) and 'công tác cai nghiện' (drug rehabilitation work) are not found in the provided nodes, which accounts for the moderate recall score.",
+          "contextual_precision": "The score is 1.00 because the retrieval contexts are perfectly ranked by relevance. The first node in the retrieval context is highly relevant, directly stating that Nghị định 105/2021/NĐ-CP is about 'QUY ĐỊNH CHI TIẾT VÀ HƯỚNG DẪN THI HÀNH MỘT SỐ ĐIỀU CỦA LUẬT PHÒNG, CHỐNG MA TÚY' and providing the core information needed to answer the input question. All subsequent nodes (ranked 2-5) are irrelevant, as they merely reference the decree without explaining its specific contents, instead serving as templates for import/export permits and management decision forms. The relevant node is appropriately ranked first, while all irrelevant nodes follow, demonstrating excellent contextual precision."
+        }
+      },
+      {
+        "question": "Trách nhiệm của cá nhân, gia đình trong phòng, chống ma tuý theo luật là gì?",
+        "answer": "Dựa trên các nguồn đã truy xuất, câu trả lời là:\n- Trách nhiệm của cá nhân, gia đình 1. [LUẬT PHÒNG, CHỐNG MA TÚY, legal]\n- Tuyên truyền, giáo dục thành viên trong gia đình, người thân về tác hại của ma túy và thực hiện quy định của pháp luật về phòng, chống ma túy; quản lý, ngăn chặn thành viên trong gia đình vi phạm pháp luật về phòng, chống ma túy. [LUẬT PHÒNG, CHỐNG MA TÚY, legal]\n- Chương II TRÁCH NHIỆM PHÒNG, CHỐNG MA TÚY Điều 6. [LUẬT PHÒNG, CHỐNG MA TÚY, legal]\n- Phạm vi điều chỉnh Luật này quy định về phòng, chống ma túy; quản lý người sử dụng trái phép chất ma túy; cai nghiện ma túy; trách nhiệm của cá nhân, gia đình, cơ quan, tổ chức trong phòng, chống ma túy; quản lý nhà nước và hợp tác quốc tế về phòng, chống ma túy. [LUẬT PHÒNG, CHỐNG MA TÚY, legal]",
+        "n_sources": 5,
+        "scores": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.9,
+          "contextual_recall": 1.0,
+          "contextual_precision": 0.8333
+        },
+        "case_avg": 0.9333,
+        "reasons": {
+          "faithfulness": "The score is 1.00 because the actual output contains no contradictions with the retrieval context. Excellent work!",
+          "answer_relevancy": "The score is 0.90 because the response addresses the main question about individual and family responsibilities in drug prevention according to law, but includes some discussion about state management and international cooperation that goes beyond the specific scope of personal and family duties requested in the input. This tangential content slightly reduces the overall relevancy, though the core answer remains largely on-target.",
+          "contextual_recall": "The score is 1.00 because all aspects of the expected output are comprehensively supported by the retrieval context. The first and second nodes in retrieval context (Điều 6) directly address the responsibilities of individuals and families regarding education, prevention of drug law violations, and cooperation with authorities. The third node in retrieval context specifically covers the obligation to declare drug addiction status. Every sentence in the expected output finds clear support in the retrieved nodes, with no gaps or unsupported claims.",
+          "contextual_precision": "The score is 0.83 because the two most relevant nodes in the retrieval contexts are ranked first and third, which is good for contextual precision. However, the score is not higher because an irrelevant node is positioned second, disrupting the ideal ranking where all relevant nodes should appear before irrelevant ones. The second node, which 'focuses on what is prohibited rather than what individuals and families must do,' should be ranked lower than the first node that directly states individuals and families must 'Tuyên truyền, giáo dục thành viên trong gia đình' and 'quản lý, ngăn chặn thành viên trong gia đình.' Additionally, the fourth and fifth nodes, which only provide 'general scope and definitions' without elaborating on specific responsibilities, are appropriately ranked lower, but their presence after the relevant third node slightly impacts the overall precision score."
+        }
+      },
+      {
+        "question": "Người nghiện ma tuý trong thời gian cai nghiện có những quyền và nghĩa vụ gì?",
+        "answer": "Dựa trên các nguồn đã truy xuất, câu trả lời là:\n- 567 + 568/Ngày 30-4-2021 25 c) Bảo đảm quyền của người nghiện ma túy trong thời gian cai nghiện và cấp giấy xác nhận hoàn thành cai nghiện ma túy bắt buộc cho người từ đủ 12 tuổi đến dưới 18 tuổi; d) Người đứng đầu cơ sở cai nghiện ma túy công lập có trách nhiệm bảo đảm [4, legal]\n- ghị xác định tình trạng nghiện ma túy và người đang trong thời gian lập hồ sơ đề nghị đưa vào cơ sở cai nghiện bắt buộc; c) Bảo đảm quyền của người nghiện ma túy trong thời gian cai nghiện và cấp giấy xác nhận hoàn thành cai nghiện ma túy bắt buộc cho người từ đủ 12 tuổi đến dưới 18 tuổi; d) Người đứng đầu cơ sở cai nghiện ma túy công lập có trách nhiệm bảo [LUẬT PHÒNG, CHỐNG MA TÚY, legal]\n- úy, quy trình cai nghiện ma túy, quản lý người đang trong thời gian lập hồ sơ đề nghị đưa vào cơ sở cai nghiện bắt buộc; b) Tôn trọng tính mạng, sức khỏe, danh dự, nhân phẩm, tài sản của người cai nghiện ma túy, người được đề nghị xác định tình trạng nghiện ma túy và người đang trong thời gian lập hồ sơ đề nghị đưa vào cơ sở cai nghiện bắt buộc; CÔNG BÁO/Số [4, legal]\n- Cơ sở cai nghiện ma túy công lập có trách nhiệm sau đây: a) Tuân thủ các quy định về xác định tình trạng nghiện ma túy, quy trình cai nghiện ma túy, quản lý người đang trong thời gian lập hồ sơ đề nghị đưa vào cơ sở cai nghiện bắt buộc; [4, legal]",
+        "n_sources": 5,
+        "scores": {
+          "faithfulness": 0.6,
+          "answer_relevancy": 0.8333,
+          "contextual_recall": 1.0,
+          "contextual_precision": 1.0
+        },
+        "case_avg": 0.8583,
+        "reasons": {
+          "faithfulness": "The score is 0.60 because the actual output contains two significant deviations from the retrieval context. First, it mischaracterizes the head of a public drug rehabilitation facility's responsibility as ensuring rights during drug rehabilitation, when the retrieval context specifically states the responsibility is to ensure operating conditions of the facility—these are distinct responsibilities. Second, the actual output includes managing people filing requests for admission to mandatory drug rehabilitation facilities as a facility responsibility, which is not mentioned in the retrieval context that only addresses compliance with regulations on determining addiction status and rehabilitation procedures. These contradictions substantially undermine the faithfulness of the output to the source material.",
+          "answer_relevancy": "The score is 0.83 because the response addresses the main question about rights and obligations of drug users during rehabilitation well, but includes a document reference number and date that doesn't contribute substantive information to answering the query. Removing this extraneous detail would make the response more focused and push the score higher.",
+          "contextual_recall": "The score is 1.00 because all key aspects of the expected output are comprehensively supported by the retrieval context. The counseling, treatment, and support services mentioned in the first part of the sentence are directly attributed to node 4 in retrieval context, which explicitly covers these functions. The obligations regarding compliance with facility regulations and completion of the detoxification process are well-supported by node 3 in retrieval context, which addresses regulatory compliance and procedural requirements. The prohibition on illegal drug use aligns with the regulatory framework established in the context. Excellent alignment across all components!",
+          "contextual_precision": "The score is 1.00 because all relevant nodes in the retrieval contexts are ranked higher than irrelevant nodes. The first four nodes in the retrieval contexts all have 'yes' verdicts and directly address the input about rights and obligations of people undergoing drug rehabilitation. They specifically mention 'Bảo đảm quyền của người nghiện ma túy trong thời gian cai nghiện' (Ensuring rights of people undergoing drug rehabilitation) and cover key aspects like counseling, treatment, management, and education. The single irrelevant node, ranked fifth, discusses post-rehabilitation management and monitoring, which falls outside the scope of the rehabilitation period itself. Perfect ranking!"
+        }
+      },
+      {
+        "question": "Các chất ma tuý tuyệt đối cấm sử dụng (nhóm I) gồm những chất tiêu biểu nào?",
+        "answer": "Dựa trên các nguồn đã truy xuất, câu trả lời là:\n- Đơn vị được tiến hành các hoạt động hợp pháp liên quan đến ma túy vì mục đích quốc phòng, an ninh được quy định tại Điều 23 của Nghị định này có trách nhiệm: a) Xây dựng kế hoạch tổ chức thực hiện các hoạt động bảo quản, tồn trữ, phân phối, sử dụng, xử lý, trao đổi chất ma túy, tiền chất trong cơ quan đảm bảo tuyệt đối an toàn và phải chịu trách nhiệm trước pháp luật về việc nhầm lẫn, thất thoát các chất đó; [NGHỊ ĐỊNH, legal]\n- ong cơ quan đảm bảo tuyệt đối an toàn và phải chịu trách nhiệm trước pháp luật về việc nhầm lẫn, thất thoát các chất đó; b) Chấp hành việc theo dõi, kiểm tra, giám sát của các cơ quan chức năng đối với các hoạt động bảo quản, tồn trữ, phân phối, sử dụng, xử lý, trao đổi chất ma túy, tiền chất tại cơ quan, đơn vị. [NGHỊ ĐỊNH, legal]\n- Đơn vị được tiến hành các hoạt động hợp pháp liên quan đến ma túy vì mục đích quốc phòng, an ninh được quy định tại Điều 23 của Nghị định này có trách nhiệm: a) Xây dựng kế hoạch tổ chức thực hiện các hoạt động bảo quản, tồn trữ, phân phối, sử dụng, xử lý, trao đổi chất ma túy, tiền chất trong cơ quan đảm bảo tuyệt đối an toàn và phải chịu trách nhiệm trước [CHÍNH PHỦ CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM, legal]\n- Đơn vị chức năng thuộc Bộ Công an chịu trách nhiệm phối hợp với các cơ quan chức năng thuộc các bộ, ngành có liên quan tiến hành theo dõi, kiểm tra, giám sát các hoạt động bảo quản, tồn trữ, phân phối, sử dụng, xử lý, trao đổi chất ma túy, tiền chất vì mục đích quốc phòng, an ninh đối với các đơn vị theo quy định tại khoản 1 của Điều này. [NGHỊ ĐỊNH, legal]",
+        "n_sources": 5,
+        "scores": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.0,
+          "contextual_recall": 0.0,
+          "contextual_precision": 0.0
+        },
+        "case_avg": 0.25,
+        "reasons": {
+          "faithfulness": "The score is 1.00 because the actual output contains no contradictions with the retrieval context. Excellent work!",
+          "answer_relevancy": "The score is 0.00 because the actual output completely fails to address the input question. The input asks for examples of absolutely prohibited narcotic substances in group I, but the output instead discusses legal frameworks, compliance requirements, and supervisory responsibilities for handling narcotic substances. None of the provided statements identify or classify any specific prohibited drugs, making the response entirely irrelevant to what was asked.",
+          "contextual_recall": "The score is 0.00 because the expected output provides a specific list of absolutely prohibited drugs (heroin, cocaine, methamphetamine, MDMA, and cannabis) in medical and civilian contexts, but none of the nodes in retrieval context contain information about these specific drug classifications or their prohibition status in medicine and daily life. The retrieval context focuses on drug-related criminal cases and defense/security regulations rather than a comprehensive list of absolutely prohibited substances.",
+          "contextual_precision": "The score is 0.00 because all retrieved nodes in the retrieval contexts are irrelevant to the input question about which substances are classified as absolutely prohibited drugs (Group I). The first node discusses a criminal case involving singer Chi Dân and does not provide information about Group I drug classifications. The second and fourth nodes address legal drug-related activities for national defense purposes but fail to identify specific prohibited substances. The third node similarly focuses on monitoring drug activities rather than listing Group I substances. The fifth node describes criminal cases involving illegal drug use but does not provide the classification of specific substances in Group I. Since every node in the retrieval contexts is irrelevant and none contain the requested information about typical substances in the absolutely prohibited drug group, the contextual precision score reflects a complete absence of relevant content."
+        }
+      },
+      {
+        "question": "Ca sĩ Miu Lê bị bắt vì hành vi gì và vào thời điểm nào?",
+        "answer": "Dựa trên các nguồn đã truy xuất, câu trả lời là:\n- # Ca sĩ Miu Lê bị bắt với cáo buộc tổ chức sử dụng ma túy **Source:** https://vnexpress.net/ca-si-miu-le-bi-bat-voi-cao-buoc-to-chuc-su-dung-ma-tuy-5074769.html **Published:** 2026-05-16 **Crawled:** 2026-06-08T15:45:49.486297 --- Ngày 16/5, Cơ quan CSĐT Công an thành phố Hải Phòng đã ra quyết định khởi tố, lệnh bắt tạm giam đối với Lê Ánh Nhật (ca sĩ Miu Lê [Ca sĩ Miu Lê bị bắt với cáo buộc tổ chức sử dụng ma túy, news]\n- , 35 tuổi, trú TP HCM) cùng Vũ Khương An (31 tuổi, quốc tịch Việt Nam và Canada) về hành vi *Tổ chức sử dụng trái phép chất ma túy; *Trần Minh Trang (30 tuổi, trú Hà Nội) bị khởi tố tội *Không tố giác tội phạm*. [Ca sĩ Miu Lê bị bắt với cáo buộc tổ chức sử dụng ma túy, news]\n- *Ngoài đóng phim, cô còn là ca sĩ, nổi tiếng với bản hit *Giá như cô ấy chưa xuất hiện*, *Thầm thương trộm nhớ*, *Vì mẹ anh bắt chia tay*. [Ca sĩ Miu Lê chưa bị khởi tố trong vụ án dùng ma túy ở đảo Cát Bà, news]\n- Miu Lê, 35 tuổi, tên thật là Lê Ánh Nhật, quê Ninh Thuận cũ. [Ca sĩ Miu Lê chưa bị khởi tố trong vụ án dùng ma túy ở đảo Cát Bà, news]",
+        "n_sources": 5,
+        "scores": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.8,
+          "contextual_recall": 1.0,
+          "contextual_precision": 0.75
+        },
+        "case_avg": 0.8875,
+        "reasons": {
+          "faithfulness": "The score is 1.00 because the actual output contains no contradictions with the retrieval context. Excellent work!",
+          "answer_relevancy": "The score is 0.80 because the response addresses the main question about Miu Lê's arrest, but includes irrelevant information about other individuals (Vũ Khương An and Trần Minh Trang) that dilutes the focus. To achieve a higher score, the answer should concentrate exclusively on Miu Lê's case without mixing in details about unrelated people.",
+          "contextual_recall": "The score is 1.00 because all key information in the expected output is fully supported by the retrieval context. The identity of the singer (nodes 1-2), the arrest date and charges (node 1), and the location of the incident (node 4) are all comprehensively covered. Excellent retrieval!",
+          "contextual_precision": "The score is 0.75 because while the first node in the retrieval contexts directly answers the input question with the exact arrest date (16/5) and charge ('Tổ chức sử dụng trái phép chất ma túy'), three out of five nodes are irrelevant. Specifically, the second node provides only background information about her real name without addressing the arrest details, the third node contains outdated information from before the arrest occurred, and the fifth node discusses her early career and personal struggles unrelated to the arrest. However, the score is not lower because the fourth node does provide relevant contextual information about the circumstances on Cát Bà island and the timeline of events (7/5 to 9/5) that led to the arrest. The presence of two highly relevant nodes at the beginning, followed by multiple irrelevant nodes, indicates imperfect ranking where some irrelevant nodes should have been ranked lower."
+        }
+      },
+      {
+        "question": "Ca sĩ Long Nhật liên quan tới vụ án ma tuý như thế nào?",
+        "answer": "Dựa trên các nguồn đã truy xuất, câu trả lời là:\n- # Sự nghiệp Long Nhật trước khi bị bắt vì liên quan ma túy **Source:** https://vnexpress.net/su-nghiep-long-nhat-truoc-khi-bi-bat-vi-lien-quan-ma-tuy-5076081.html **Published:** 2026-05-20 **Crawled:** 2026-06-08T15:45:53.322903 --- Ngày 20/5, Công an TP HCM cho biết Đinh Long Nhật (tức ca sĩ Long Nhật, 58 tuổi) bị Phòng Cảnh sát điều tra tội phạm về mua túy (PC04) bắt về hành vi *Tổ chức sử dụng trái phép chất ma túy*. [Sự nghiệp Long Nhật trước khi bị bắt vì liên quan ma túy, news]\n- Ca sĩ khai tổ chức sử dụng ma túy đá cùng người giúp việc và một người quen đến chơi nhà, thừa nhận chuyển tiền nhờ người mua hàng. [Sự nghiệp Long Nhật trước khi bị bắt vì liên quan ma túy, news]\n- m đuôi gà *(Thế Hiển),* Về quê ngoại *(Hàn Châu), *Về quê *(Phó Đức Phương), *Xin làm người hát rong* (Trần Long Ẩn).* * Năm 1999, Long Nhật được mời thu album đầu tay* Xin làm người hát rong*. [Sự nghiệp Long Nhật trước khi bị bắt vì liên quan ma túy, news]\n- \"Khi đó, các điểm diễn ở miền Bắc, không nơi nào không có bóng dáng tôi\", Long Nhật từng nói. [Sự nghiệp Long Nhật trước khi bị bắt vì liên quan ma túy, news]",
+        "n_sources": 5,
+        "scores": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.6667,
+          "contextual_recall": 1.0,
+          "contextual_precision": 0.75
+        },
+        "case_avg": 0.8542,
+        "reasons": {
+          "faithfulness": "The score is 1.00 because the actual output contains no contradictions with the retrieval context. Excellent work!",
+          "answer_relevancy": "The score is 0.67 because while the response addresses the topic of Long Nhật and the drug case, it includes irrelevant information about his music career in 1999 and his performance history in the North. These details distract from directly answering the specific question about his involvement in the drug case. To improve the score, the response should focus exclusively on facts related to the drug case itself.",
+          "contextual_recall": "The score is 1.00 because all key information in the expected output is fully supported by the retrieval context. Node 1 in retrieval context confirms the singer's identity (Đinh Long Nhật/Long Nhật), the arresting authority (Công an TP HCM), and the specific charge (organizing illegal drug use), while Node 4 corroborates that Long Nhật is part of a series of celebrities arrested for drug-related offenses. Perfect alignment!",
+          "contextual_precision": "The score is 0.75 because the relevant nodes are mostly ranked higher than irrelevant nodes, but there is one ranking issue that prevents a perfect score. The first node correctly ranks highest as it directly addresses the question with the quote 'Đinh Long Nhật (tức ca sĩ Long Nhật, 58 tuổi) bị Phòng Cảnh sát điều tra tội phạm về mua túy (PC04) bắt về hành vi Tổ chức sử dụng trái phép chất ma túy'. However, the fourth node, which is relevant and mentions that 'Long Nhật và nhiều người nổi tiếng liên tiếp bị bắt vì vướng vào ma túy gần đây', is ranked after two irrelevant nodes (the second and third nodes about his career history and 2024 liveshow). This placement of a relevant node in the fourth position, after irrelevant nodes discussing his musical activities and career development, reduces the overall contextual precision."
+        }
+      },
+      {
+        "question": "Ca sĩ Chu Bin bị bắt trong hoàn cảnh nào?",
+        "answer": "Dựa trên các nguồn đã truy xuất, câu trả lời là:\n- Tháng 6/2024, ca sĩ Chu Bin bị bắt khi công an phát hiện anh cùng 5 người khác đang sử dụng ma túy tại một căn nhà ở Quận 10, TPHCM. [Sao Việt bị bắt, ngồi tù, mất danh tiếng vì chất cấm, news]\n- Cùng tháng, người mẫu Nhikolai Đinh bị Công an Quận 1 (cũ) khởi tố, bắt tạm giam để điều tra về hành vi tàng trữ trái phép chất ma túy. [Sao Việt bị bắt, ngồi tù, mất danh tiếng vì chất cấm, news]\n- Thời điểm bị bắt, Nhikolai Đinh cùng 9 người khác bị phát hiện có nhiều gói ma túy trên người, kết quả test nhanh dương tính với ma túy. [Sao Việt bị bắt, ngồi tù, mất danh tiếng vì chất cấm, news]\n- iễn viên Lệ Hằng - từng nổi tiếng qua các phim truyền hình *Xin hãy tin em* bị khởi tố vì mua bán trái phép chất ma túy. [Sao Việt bị bắt, ngồi tù, mất danh tiếng vì chất cấm, news]",
+        "n_sources": 5,
+        "scores": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.25,
+          "contextual_recall": 1.0,
+          "contextual_precision": 1.0
+        },
+        "case_avg": 0.8125,
+        "reasons": {
+          "faithfulness": "The score is 1.00 because the actual output contains no contradictions with the retrieval context. Excellent work!",
+          "answer_relevancy": "The score is 0.25 because the actual output primarily discusses the arrest of model Nikolai Dinh and actress Le Hang's prosecution, which are completely irrelevant to the input question about singer Chu Bin's arrest circumstances. The response fails to address the specific person and context asked about, making it largely off-topic.",
+          "contextual_recall": "The score is 1.00 because the entire expected output is directly supported by the 1st node in retrieval context, which provides comprehensive coverage of all key information including the arrest date (Tháng 6/2024), the person involved (ca sĩ Chu Bin), the circumstances (sử dụng ma túy), and the location (TP HCM). Excellent alignment!",
+          "contextual_precision": "The score is 1.00 because the retrieval contexts are perfectly ranked by relevance. The first node in the retrieval context is highly relevant, directly stating 'Tháng 6/2024, ca sĩ Chu Bin bị bắt khi công an phát hiện anh cùng 5 người khác đang sử dụng ma túy tại một căn nhà ở Quận 10, TPHCM,' which precisely answers the input question about the circumstances of Chu Bin's arrest. All four irrelevant nodes that follow (ranks 2-5) discuss arrests of other singers—Long Nhật and Chi Dân—rather than Chu Bin, making them appropriately ranked lower than the relevant node. The ranking perfectly separates relevant from irrelevant content."
+        }
+      },
+      {
+        "question": "Diễn viên hài Hiệp Gà từng bị xử lý về ma tuý ra sao?",
+        "answer": "Dựa trên các nguồn đã truy xuất, câu trả lời là:\n- Tháng 4/2007, diễn viên hài Hiệp Gà bị công an phường Phương Liên, Hà Nội bắt quả tang tàng trữ heroin. [Sao Việt bị bắt, ngồi tù, mất danh tiếng vì chất cấm, news]\n- Từ một nghệ sĩ hài nổi tiếng với *Gặp nhau cuối tuần*, sau khi ra tù Hiệp Gà chỉ còn có thể tham gia các tiểu phẩm hài, phim ngắn chiếu trên mạng hoặc diễn ở các tụ điểm giải trí để mưu sinh. [Sao Việt bị bắt, ngồi tù, mất danh tiếng vì chất cấm, news]\n- Ngày 31/7/2007, TAND quận Đống Đa tuyên phạt Hiệp Gà 24 tháng tù giam về tội tàng trữ trái phép chất ma túy. [Sao Việt bị bắt, ngồi tù, mất danh tiếng vì chất cấm, news]\n- VietNamNet xin được điểm lại những sao Việt từng phải trả giá về cuộc sống buông thả của mình. [Sao Việt bị bắt, ngồi tù, mất danh tiếng vì chất cấm, news]",
+        "n_sources": 5,
+        "scores": {
+          "faithfulness": 1.0,
+          "answer_relevancy": 0.8,
+          "contextual_recall": 1.0,
+          "contextual_precision": 1.0
+        },
+        "case_avg": 0.95,
+        "reasons": {
+          "faithfulness": "The score is 1.00 because the actual output contains no contradictions with the retrieval context. Excellent work!",
+          "answer_relevancy": "The score is 0.80 because the response addresses the main topic of Hiệp Gà's drug offense case, but includes a general statement about celebrity news and indulgent lifestyles that doesn't specifically explain how he was processed or the details of his legal case. The response would be stronger with more focused information directly addressing the specifics of his drug offense handling.",
+          "contextual_recall": "The score is 1.00 because the expected output is fully supported by node 1 in retrieval context, which provides specific details about comedian Hiệp Gà being caught red-handed by police in Hanoi's Phương Liên ward in April 2007 for heroin possession. Excellent match!",
+          "contextual_precision": "The score is 1.00 because all relevant nodes in the retrieval contexts are ranked higher than irrelevant nodes. The first three nodes are ranked at positions 1-3 and all contain direct information about Hiệp Gà's drug case, with the first node providing 'the exact information needed' including the arrest in April 2007 and the 24-month sentence. The fourth node, ranked at position 4, is only 'tangentially relevant' as it primarily focuses on Hữu Tín's situation while merely mentioning Hiệp Gà's case briefly. The fifth node, ranked last at position 5, is completely irrelevant as it discusses 'Hữu Tín's background, education, and career achievements' with no information about Hiệp Gà. Perfect ranking!"
+        }
+      },
+      {
+        "question": "Hệ quả sự nghiệp với các nghệ sĩ Việt khi vướng vào ma tuý là gì?",
+        "answer": "Dựa trên các nguồn đã truy xuất, câu trả lời là:\n- Nhiều người trong nghề cho rằng sự việc Long Nhật và nhiều người nổi tiếng liên tiếp bị bắt vì vướng vào ma túy gần đây là bài học cảnh báo. [Sự nghiệp Long Nhật trước khi bị bắt vì liên quan ma túy, news]\n- Nghệ sĩ Ưu tú Hạnh Thúy cho biết chứng kiến nhiều người lụn bại sự nghiệp sau khi sử dụng chất cấm, không ai dám hợp tác. [Sự nghiệp Long Nhật trước khi bị bắt vì liên quan ma túy, news]\n- Năm 2020, Long Nhật tham gia một vai phụ trong phim cổ trang* Phượng khấu* (đạo diễn Huỳnh Tuấn Anh), đóng cùng các nghệ sĩ gạo cội như Thành Lộc, Hồng Vân, Hồng Đào. [Sự nghiệp Long Nhật trước khi bị bắt vì liên quan ma túy, news]\n- Ở mảng phim, ca sĩ từng góp mặt trong một số dự án truyền hình lẫn web drama. [Sự nghiệp Long Nhật trước khi bị bắt vì liên quan ma túy, news]",
+        "n_sources": 5,
+        "scores": {
+          "faithfulness": 0.75,
+          "answer_relevancy": 0.75,
+          "contextual_recall": 1.0,
+          "contextual_precision": 0.8042
+        },
+        "case_avg": 0.826,
+        "reasons": {
+          "faithfulness": "The score is 0.75 because the actual output incorrectly associates Long Nhật with drug-related arrests, when the retrieval context only mentions Chi Dân and An Tây as being prosecuted in drug-related cases. This factual inaccuracy regarding Long Nhật's involvement represents a notable deviation from the provided context, though the majority of the output remains faithful to the source material.",
+          "answer_relevancy": "The score is 0.75 because the response addresses the main topic of career consequences for Vietnamese artists involved with drugs, but includes a statement about a specific acting role and project participation that diverges from the core question. This tangential information dilutes the focus on the direct career impacts of drug involvement, preventing a higher score. The response is mostly on-topic but would benefit from staying strictly focused on the consequences rather than including unrelated career details.",
+          "contextual_recall": "The score is 1.00 because the expected output is comprehensively supported by the retrieval context. Nodes 1, 3, 4, and 5 in retrieval context collectively substantiate all key aspects of the statement: node 1 confirms career destruction from drug use, node 3 documents career halt due to drug allegations, and nodes 4-5 provide specific cases of artists being arrested and prosecuted for drug-related offenses. Excellent coverage!",
+          "contextual_precision": "The score is 0.80 because the retrieval contexts demonstrate strong overall relevance to the input about consequences for Vietnamese artists involved in drugs. The first node ranks relevant content about career collapse and arrests, the third node provides specific examples of career stagnation due to drug-related scandals, the fourth node mentions prosecutions, and the fifth node details arrest and prosecution consequences. However, the score is not higher because the second node, which discusses Long Nhật's 2024 liveshow and musical performances without addressing drug consequences, is ranked second in the retrieval contexts. This irrelevant node should have been positioned lower than the relevant nodes that follow it, as it does not support the expected output about career consequences from drug involvement."
+        }
+      },
+      {
+        "question": "Thủ đô của nước Pháp tên là gì?",
+        "answer": "Dựa trên các nguồn đã truy xuất, câu trả lời là:\n- ang các nước tham gia Điều 12 Công ước năm 1988 của Liên hợp quốc về chống buôn bán bất hợp pháp các chất ma túy và các chất hướng thần), bao gồm cả dạng đơn chất và dạng phối hợp; Trong thời hạn chậm nhất là 03 ngày làm việc, kể từ ngày nhận được đơn và hồ sơ đề nghị cấp giấy phép xuất khẩu hợp lệ, cơ quan có thẩm quyền cấp phép có trách nhiệm gửi Bộ Công a [CHÍNH PHỦ CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM, legal]\n- n những thông tin về tên, địa chỉ tổ chức đề nghị cấp phép xuất khẩu; tên gọi, hàm lượng, số lượng tiền chất; tên, địa chỉ tổ chức nhập khẩu; tên cửa khẩu có hàng xuất khẩu đi qua để ra thông báo tiền xuất khẩu đối với lô hàng cho cơ quan chức năng của nước nhập khẩu. [CHÍNH PHỦ CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM, legal]\n- NGƯỜI LẬP BẢN TÓM TẮT LÝ LỊCH THỦ TRƯỞNG ĐƠN VỊ (Ký, ghi rõ họ tên) (Ký, ghi rõ họ tên, đóng dấu) ____________________ 1 Tên cơ quan chủ quản. [CHÍNH PHỦ CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM, legal]\n- quốc về chống buôn bán bất hợp pháp các chất ma túy và các chất hướng thần), bao gồm cả dạng đơn chất và dạng phối hợp; Trong thời hạn chậm nhất là 03 ngày làm việc, kể từ ngày nhận được đơn và hồ sơ đề nghị cấp giấy phép xuất khẩu hợp lệ, cơ quan có thẩm quyền cấp phép có trách nhiệm gửi Bộ Công an những thông tin về tên, địa chỉ tổ chức đề nghị cấp phép xu [NGHỊ ĐỊNH, legal]",
+        "n_sources": 5,
+        "scores": {
+          "faithfulness": 0.6,
+          "answer_relevancy": 0.0,
+          "contextual_recall": 1.0,
+          "contextual_precision": 0.0
+        },
+        "case_avg": 0.4,
+        "reasons": {
+          "faithfulness": "The score is 0.60 because the actual output contains two significant issues: First, it conflates general information about narcotic drugs and psychotropic substances existing in single and combined forms with specific requirements for countries participating in Article 12 of the 1988 UN Convention, misrepresenting the scope of the claim. Second, it incorrectly identifies the recipient of required information as the relevant authorities of the importing country, when the context clearly specifies that information must be sent to the Ministry of Public Security instead. These contradictions substantially undermine the faithfulness of the output to the retrieval context.",
+          "answer_relevancy": "The score is 0.00 because the actual output is entirely irrelevant to the input question. The input asks 'What is the capital of France?' in Vietnamese, but the output discusses UN conventions on narcotic drugs, export licensing procedures, and border gate protocols—none of which address the straightforward geographical question being asked. Every statement in the response is off-topic.",
+          "contextual_recall": "The score is 1.00 because the expected output is fully supported by the retrieval context. The statement about being unable to verify information and the question falling outside the corpus scope is well-grounded in nodes 1, 3, and 4 in retrieval context, which contain comprehensive information on drug trafficking laws, regulations, and legal procedures. Excellent alignment!",
+          "contextual_precision": "The score is 0.00 because all five nodes in the retrieval contexts are irrelevant to the input question about the capital of France. The first node discusses 'UN conventions on drug trafficking and predecessor substances, export-import procedures, and customs regulations'; the second node contains 'a form template for personnel records'; the third node addresses 'regulations regarding illegal drug trafficking'; the fourth node covers 'transport contracts, transit permits, and customs documentation'; and the fifth node is 'a form for declaring chemical substances' related to drug control. Since no relevant nodes were retrieved and all irrelevant nodes occupy the top rankings, the contextual precision score reflects a complete failure to rank relevant information higher than irrelevant information."
+        }
+      }
+    ]
+  }
+]
