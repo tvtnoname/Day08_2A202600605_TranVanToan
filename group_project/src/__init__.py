@@ -1,1 +1,1 @@
-# Package initialization for src
+"""Group Project — RAG Chatbot Core Package."""
