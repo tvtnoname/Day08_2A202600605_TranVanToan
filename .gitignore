@@ -28,3 +28,7 @@ document.md
 plan.md
 **/document.md
 **/plan.md
+
+# Chainlit
+.files/
+**/.files/
