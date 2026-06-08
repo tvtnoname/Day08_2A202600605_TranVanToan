@@ -11,7 +11,7 @@ from . import config
 # Import các module từ personal_project thông qua personal_src
 from personal_src.task5_semantic_search import semantic_search
 from personal_src.task6_lexical_search import lexical_search
-from personal_src.task7_reranking import rerank, rerank_rrf
+from personal_src.task7_reranking import rerank as personal_rerank, rerank_rrf
 from personal_src.task8_pageindex_vectorless import pageindex_search
 from personal_src.task10_generation import reorder_for_llm, format_context, SYSTEM_PROMPT
 
@@ -82,7 +82,7 @@ def retrieve_dynamic(
         
     # 3. Rerank
     if rerank_method != "none" and merged:
-        final_results = rerank(query, merged, top_k=top_k, method=rerank_method)
+        final_results = personal_rerank(query, merged, top_k=top_k, method=rerank_method)
     else:
         final_results = merged[:top_k]
         
