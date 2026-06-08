@@ -151,10 +151,10 @@ run_dashboard()
 
 ### Deliverable Evaluation
 
-- [ ] File `group_project/evaluation/golden_dataset.json` — 15+ cặp Q&A
-- [ ] File `group_project/evaluation/eval_pipeline.py` — script chạy evaluation
-- [ ] File `group_project/evaluation/results.md` — bảng điểm + phân tích
-- [ ] So sánh A/B ít nhất 2 configs
+- [x] File `group_project/evaluation/golden_dataset.json` — 15+ cặp Q&A
+- [x] File `group_project/evaluation/eval_pipeline.py` — script chạy evaluation
+- [x] File `group_project/evaluation/results.md` — bảng điểm + phân tích
+- [x] So sánh A/B ít nhất 2 configs
 
 ---
 
@@ -170,20 +170,75 @@ run_dashboard()
 
 ## Kiến Trúc Hệ Thống
 
-```
-[Vẽ diagram kiến trúc ở đây]
+```text
+                       +-----------------------------------+
+                       |        Giao diện Web Chat         |
+                       |             (app.py)              |
+                       +-----------------+-----------------+
+                                         |
+                                         v
+                       +-----------------+-----------------+
+                       |         RAG Core Engine           |
+                       |       (src/rag_engine.py)         |
+                       +-----------------+-----------------+
+                                         |
+                       +-----------------+-----------------+
+                       |   Đóng gói Standalone Question    |
+                       |      (condense_question)          |
+                       +-----------------+-----------------+
+                                         |
+                                         v
+                         /-------------------------------\
+                        /   Tìm kiếm kết hợp (Retrieval)  \
+                        ---------------------------------
+                               /                  \
+                              /                    \
+                             v                      v
+                +------------+-----------+  +-------+---------------+
+                |   Semantic Search      |  |     Lexical Search    |
+                | (Dense TF-IDF Cosine)  |  |      (BM25 Local)     |
+                +------------+-----------+  +-------+---------------+
+                             \                      /
+                              \                    /
+                               v                  v
+                       +-------+------------------+--------+
+                       |      Reciprocal Rank Fusion (RRF) |
+                       +-----------------+-----------------+
+                                         |
+                                         v
+                       +-----------------+-----------------+
+                       |       Rerank nội bộ (Overlap)     |
+                       +-----------------+-----------------+
+                                         |
+                                         | (Điểm cao >= Ngưỡng)
+                                         +------------------------------+
+                                         |                              |
+                                         | (Điểm < Ngưỡng)              |
+                                         v                              v
+                       +-----------------+-----------------+    +-------+-------+
+                       | PageIndex Vectorless Search (T3)  |    |  Context      |
+                       |           (Fallback)              |    |  Reordering   |
+                       +-----------------+-----------------+    +-------+-------+
+                                         |                              |
+                                         +------------------------------+
+                                         |
+                                         v
+                       +-----------------+-----------------+
+                       |       Generation có Citation      |
+                       |         (LLM / Extractive)        |
+                       +-----------------+-----------------+
 ```
 
 ---
 
 ## Phân Công Công Việc
 
-| Thành viên | MSSV | Nhiệm vụ | Trạng thái |
+| Thành viên | MSSV | Vai trò & Nhiệm vụ | Trạng thái |
 |-----------|------|----------|------------|
-|Thành viên 1 | 2A2026...| Tích hợp, chọn lọc codebase cá nhân. Viết core engine tại src/rag_engine.py xử lý Hybrid search (Dense + Sparse), Reranking (CrossEncoder/MMR) và PageIndex fallback. Định nghĩa template prompt sinh câu trả lời có Citation. | Đang thực hiện|
-| Thành viên 2| 2A2026...|- Tích hợp, chọn lọc codebase cá nhân.<br>- Viết core engine tại `src/rag_engine.py` xử lý Hybrid search (Dense + Sparse), Reranking (CrossEncoder/MMR) và PageIndex fallback.<br>- Định nghĩa template prompt sinh câu trả lời có Citation. | Đang thực hiện|
-|Thành viên 3 |2A2026... |- Thiết lập và cấu hình framework đánh giá (DeepEval / Ragas).<br>- Viết script `evaluation/eval_pipeline.py` để tự động hóa việc đọc dataset, gọi pipeline RAG và tính toán 4 metrics cốt lõi.<br>- Thực thi đánh giá so sánh A/B Testing trên ít nhất 2 cấu hình (ví dụ: có Rerank vs không Rerank).  |Đang thực hiện |
-|Thành viên 4 | 2A2026...| - Biên soạn 15+ cặp câu hỏi Q&A chất lượng lưu vào `evaluation/golden_dataset.json`.<br>- Thực hiện chạy thử nghiệm đánh giá cùng Thành viên 3.<br>- Phân tích các trường hợp tệ nhất (worst performers) và đề xuất cải tiến.<br>- Vẽ sơ đồ kiến trúc hệ thống và cập nhật báo cáo `evaluation/results.md` & `README.md`. |Đang thực hiện |
+| **Trần Văn Toàn** (Trưởng nhóm) | 2A202600605 | **RAG Core Engineer**<br>- Tích hợp, chọn lọc codebase cá nhân.<br>- Viết core engine tại `src/rag_engine.py` xử lý Hybrid search (Dense + Sparse), Rerank nội bộ và PageIndex fallback.<br>- Định nghĩa template prompt sinh câu trả lời có Citation. | **Hoàn thành** |
+| **Trịnh Quang Hưng** | 2A202600665 | **UI/UX Chat Developer**<br>- Xây dựng giao diện Web Chatbot tương tác bằng Streamlit tại `app.py`.<br>- Tích hợp cơ chế bộ nhớ hội thoại (`st.session_state` / conversation memory) cho các câu hỏi follow-up.<br>- Thiết kế phần hiển thị tài liệu nguồn đã sử dụng ở thanh sidebar hoặc accordion. | **Hoàn thành** |
+| **Đỗ Việt Anh** | 2A202601008 | **Evaluation Engineer**<br>- Thiết lập và cấu hình framework đánh giá (DeepEval).<br>- Viết script `evaluation/eval_pipeline.py` để tự động hóa việc đọc dataset, gọi pipeline RAG và tính toán 4 metrics cốt lõi.<br>- Thực thi đánh giá so sánh A/B Testing trên 2 cấu hình (có Rerank vs không Rerank). | **Hoàn thành** |
+| **Nguyễn Hoàng Lân** | 2A202600899 | **Data Analyst & Writer**<br>- Biên soạn 16 cặp câu hỏi Q&A chất lượng lưu vào `evaluation/golden_dataset.json`.<br>- Thực hiện chạy thử nghiệm đánh giá cùng Thành viên 3.<br>- Phân tích các trường hợp tệ nhất (worst performers) và đề xuất cải tiến.<br>- Vẽ sơ đồ kiến trúc hệ thống và cập nhật báo cáo `evaluation/results.md` & `README.md`. | **Hoàn thành** |
 
 ---
 

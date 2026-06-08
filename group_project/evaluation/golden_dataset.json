@@ -13,5 +13,70 @@
     "question": "Danh mục các chất ma tuý thuộc nhóm I theo quy định pháp luật Việt Nam gồm những chất nào?",
     "expected_answer": "Nhóm I gồm các chất ma tuý tuyệt đối cấm sử dụng trong y học và đời sống, bao gồm heroin, cocaine, methamphetamine, MDMA (ecstasy), cannabis (cần sa), và các chất tương tự.",
     "expected_context": "Nghị định 57/2022/NĐ-CP, Phụ lục I"
+  },
+  {
+    "question": "Hình phạt đối với tội sản xuất trái phép chất ma túy theo Điều 248 Bộ luật Hình sự như thế nào?",
+    "expected_answer": "Người nào sản xuất trái phép chất ma túy dưới bất kỳ hình thức nào thì bị phạt tù từ 02 năm đến 07 năm. Phạm tội thuộc các tình tiết tăng nặng như có tổ chức, phạm tội 02 lần trở lên, lợi dụng chức vụ thì bị phạt tù từ 07 năm đến 15 năm, hoặc từ 15 năm đến 20 năm, tù chung thân hoặc tử hình.",
+    "expected_context": "Bộ luật Hình sự 2015, Điều 248"
+  },
+  {
+    "question": "Theo Luật Phòng chống ma túy 2021, người từ đủ 12 tuổi đến dưới 18 tuổi bị đưa vào cơ sở cai nghiện bắt buộc trong trường hợp nào?",
+    "expected_answer": "Người nghiện ma túy từ đủ 12 tuổi đến dưới 18 tuổi bị đưa vào cơ sở cai nghiện bắt buộc khi không đăng ký, không thực hiện hoặc tự ý chấm dứt cai nghiện tự nguyện, hoặc bị phát hiện sử dụng trái phép chất ma túy trong thời gian cai nghiện tự nguyện.",
+    "expected_context": "Luật Phòng chống ma túy 2021, Điều 33"
+  },
+  {
+    "question": "Mức phạt tù cho tội cưỡng bức người khác sử dụng trái phép chất ma túy theo quy định tại Điều 257 Bộ luật Hình sự là gì?",
+    "expected_answer": "Người nào cưỡng bức người khác sử dụng trái phép chất ma túy dưới bất kỳ hình thức nào thì bị phạt tù từ 02 năm đến 07 năm. Nếu thuộc các trường hợp có tổ chức, phạm tội nhiều lần, đối với người từ đủ 13 tuổi đến dưới 18 tuổi thì bị phạt tù từ 07 năm đến 15 năm, hoặc nặng hơn lên đến tù chung thân.",
+    "expected_context": "Bộ luật Hình sự 2015, Điều 257"
+  },
+  {
+    "question": "Thời hạn cai nghiện ma túy bắt buộc đối với người từ đủ 18 tuổi trở lên là bao lâu?",
+    "expected_answer": "Thời hạn cai nghiện ma túy bắt buộc đối với người nghiện ma túy từ đủ 18 tuổi trở lên là từ 12 tháng đến 24 tháng.",
+    "expected_context": "Luật Phòng chống ma túy 2021, Điều 38"
+  },
+  {
+    "question": "Người cai nghiện ma túy tự nguyện tại gia đình, cộng đồng có những trách nhiệm gì?",
+    "expected_answer": "Người cai nghiện ma túy tự nguyện có trách nhiệm thực hiện đúng quyết định, kế hoạch cai nghiện; tuân thủ hướng dẫn của cơ quan chuyên môn; thực hiện các nghĩa vụ đóng góp và báo cáo kết quả cai nghiện cho Ủy ban nhân dân cấp xã.",
+    "expected_context": "Luật Phòng chống ma túy 2021, Điều 30"
+  },
+  {
+    "question": "Hình phạt cao nhất đối với tội tổ chức sử dụng trái phép chất ma túy theo Điều 255 Bộ luật Hình sự là gì?",
+    "expected_answer": "Hình phạt cao nhất đối với tội tổ chức sử dụng trái phép chất ma túy theo Điều 255 Bộ luật Hình sự là tù chung thân.",
+    "expected_context": "Bộ luật Hình sự 2015, Điều 255"
+  },
+  {
+    "question": "Những đối tượng nào phải chịu biện pháp xử lý hành chính đưa vào cơ sở cai nghiện bắt buộc?",
+    "expected_answer": "Người nghiện ma túy từ đủ 18 tuổi trở lên bị áp dụng biện pháp đưa vào cơ sở cai nghiện bắt buộc nếu không đăng ký cai nghiện tự nguyện, không thực hiện cai nghiện tự nguyện, tự ý chấm dứt cai nghiện tự nguyện hoặc tái nghiện.",
+    "expected_context": "Luật Phòng chống ma túy 2021, Điều 32"
+  },
+  {
+    "question": "Hồ sơ đề nghị áp dụng biện pháp cai nghiện bắt buộc theo Nghị định 105/2021/NĐ-CP gồm những tài liệu chủ yếu nào?",
+    "expected_answer": "Hồ sơ gồm biên bản vi phạm, bản tóm tắt lý lịch người nghiện, kết quả xét nghiệm ma túy, phiếu kết luận tình trạng nghiện ma túy và đơn đề nghị của cơ quan Công an hoặc Ủy ban nhân dân cấp xã.",
+    "expected_context": "Nghị định 105/2021/NĐ-CP, Điều 42"
+  },
+  {
+    "question": "Khái niệm chất ma túy và tiền chất theo Luật Phòng chống ma túy 2021 được định nghĩa như thế nào?",
+    "expected_answer": "Chất ma túy là chất gây nghiện, chất hướng thần được quy định trong các danh mục do Chính phủ ban hành. Tiền chất là hóa chất không thể thiếu trong quá trình điều chế, sản xuất chất ma túy được quy định trong danh mục do Chính phủ ban hành.",
+    "expected_context": "Luật Phòng chống ma túy 2021, Điều 2"
+  },
+  {
+    "question": "Trường hợp nào người nghiện ma túy được hoãn hoặc miễn chấp hành quyết định đưa vào cơ sở cai nghiện bắt buộc?",
+    "expected_answer": "Người nghiện được hoãn khi bị bệnh nặng đang điều trị, phụ nữ có thai hoặc đang nuôi con nhỏ dưới 36 tháng tuổi, hoặc là lao động duy nhất trong gia đình gặp hoàn cảnh đặc biệt khó khăn. Được miễn khi mắc bệnh hiểm nghèo, không còn khả năng nhận thức hoặc hành vi.",
+    "expected_context": "Nghị định 105/2021/NĐ-CP, Điều 56"
+  },
+  {
+    "question": "Những nghệ sĩ showbiz Việt nào đã gây sốc dư luận vì bê bối tàng trữ, sử dụng ma túy được nêu trong các bài báo?",
+    "expected_answer": "Các nghệ sĩ bao gồm diễn viên Lệ Hằng (bị bắt vì mua bán ma túy), ca sĩ Chi Dân, người mẫu An Tây (Andrea Aybar) bị tạm giữ vì liên quan đến chất cấm, và ca sĩ Châu Việt Cường bị kết án vì ngáo đá gây tử vong.",
+    "expected_context": "Tin tức showbiz, các bài báo article_01 đến article_04"
+  },
+  {
+    "question": "PGS. TS. Bùi Hoài Sơn nhấn mạnh điều gì về vấn nạn ma túy trong giới nghệ sĩ?",
+    "expected_answer": "Ông nhấn mạnh vấn nạn ma túy trong showbiz không còn là chuyện cá nhân đơn lẻ mà ảnh hưởng xấu đến lối sống của giới trẻ và công chúng. Cần có biện pháp xử lý nghiêm khắc như 'phong sát' hoặc hạn chế phát sóng để răn đe.",
+    "expected_context": "Ý kiến chuyên gia, article_05"
+  },
+  {
+    "question": "Hậu quả về sự nghiệp đối với nghệ sĩ Việt khi dính líu vào ma túy như thế nào theo phản ánh của báo chí?",
+    "expected_answer": "Nghệ sĩ dính líu vào ma túy phải chịu sự tẩy chay từ công chúng, bị hủy bỏ hợp đồng quảng cáo, dừng các hoạt động biểu diễn, mất đi toàn bộ danh tiếng và sự nghiệp dày công xây dựng bị sụp đổ hoàn toàn.",
+    "expected_context": "Đánh giá tác động, các bài báo showbiz"
   }
 ]
