@@ -180,10 +180,10 @@ run_dashboard()
 
 | Thành viên | MSSV | Nhiệm vụ | Trạng thái |
 |-----------|------|----------|------------|
-| | | | |
-| | | | |
-| | | | |
-| | | | |
+|Thành viên 1 | 2A2026...| Tích hợp, chọn lọc codebase cá nhân. Viết core engine tại src/rag_engine.py xử lý Hybrid search (Dense + Sparse), Reranking (CrossEncoder/MMR) và PageIndex fallback. Định nghĩa template prompt sinh câu trả lời có Citation. | Đang thực hiện|
+| Thành viên 2| 2A2026...|- Tích hợp, chọn lọc codebase cá nhân.<br>- Viết core engine tại `src/rag_engine.py` xử lý Hybrid search (Dense + Sparse), Reranking (CrossEncoder/MMR) và PageIndex fallback.<br>- Định nghĩa template prompt sinh câu trả lời có Citation. | Đang thực hiện|
+|Thành viên 3 |2A2026... |- Thiết lập và cấu hình framework đánh giá (DeepEval / Ragas).<br>- Viết script `evaluation/eval_pipeline.py` để tự động hóa việc đọc dataset, gọi pipeline RAG và tính toán 4 metrics cốt lõi.<br>- Thực thi đánh giá so sánh A/B Testing trên ít nhất 2 cấu hình (ví dụ: có Rerank vs không Rerank).  |Đang thực hiện |
+|Thành viên 4 | 2A2026...| - Biên soạn 15+ cặp câu hỏi Q&A chất lượng lưu vào `evaluation/golden_dataset.json`.<br>- Thực hiện chạy thử nghiệm đánh giá cùng Thành viên 3.<br>- Phân tích các trường hợp tệ nhất (worst performers) và đề xuất cải tiến.<br>- Vẽ sơ đồ kiến trúc hệ thống và cập nhật báo cáo `evaluation/results.md` & `README.md`. |Đang thực hiện |
 
 ---
 
