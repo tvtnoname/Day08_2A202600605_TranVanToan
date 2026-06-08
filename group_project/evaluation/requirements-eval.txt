@@ -1,0 +1,8 @@
+# Dependencies cho Evaluation pipeline (Thành viên 3)
+# Cài: pip install -r evaluation/requirements-eval.txt
+deepeval>=4.0.0
+python-dotenv>=1.0.0
+
+# Ghi chú: judge dùng router OpenAI-compatible của nhóm (xem evaluation/eval_models.py),
+# nên KHÔNG cần OPENAI_API_KEY thật. Cấu hình trong .env:
+#   OPENAI_BASE_URL, OPENAI_API_KEY (key router), JUDGE_MODEL

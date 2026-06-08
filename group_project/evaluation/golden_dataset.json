@@ -1,17 +1,82 @@
 [
   {
     "question": "Hình phạt cho tội tàng trữ trái phép chất ma tuý theo Điều 249 Bộ luật Hình sự?",
-    "expected_answer": "Phạt tù từ 1 đến 5 năm đối với trường hợp tàng trữ từ 1g đến dưới 5g heroin hoặc cocaine, hoặc chất ma tuý khác với khối lượng tương đương.",
+    "expected_answer": "Người tàng trữ trái phép chất ma túy mà không nhằm mục đích mua bán, vận chuyển, sản xuất thì bị phạt tù từ 1 đến 5 năm; mức phạt tăng theo khối lượng và tình tiết, cao nhất có thể tù chung thân.",
     "expected_context": "Bộ luật Hình sự 2015, Điều 249"
   },
   {
     "question": "Luật Phòng chống ma tuý 2021 quy định những hình thức cai nghiện nào?",
-    "expected_answer": "Cai nghiện tự nguyện tại gia đình, cai nghiện tự nguyện tại cộng đồng, cai nghiện tự nguyện tại cơ sở cai nghiện, và cai nghiện bắt buộc tại cơ sở cai nghiện.",
-    "expected_context": "Luật Phòng chống ma tuý 2021, Chương V"
+    "expected_answer": "Có cai nghiện ma túy tự nguyện và cai nghiện ma túy bắt buộc; cai nghiện tự nguyện thực hiện tại gia đình, cộng đồng hoặc tại cơ sở cai nghiện, còn cai nghiện bắt buộc thực hiện tại cơ sở cai nghiện ma túy công lập.",
+    "expected_context": "Luật Phòng chống ma tuý 2021"
   },
   {
-    "question": "Danh mục các chất ma tuý thuộc nhóm I theo quy định pháp luật Việt Nam gồm những chất nào?",
-    "expected_answer": "Nhóm I gồm các chất ma tuý tuyệt đối cấm sử dụng trong y học và đời sống, bao gồm heroin, cocaine, methamphetamine, MDMA (ecstasy), cannabis (cần sa), và các chất tương tự.",
-    "expected_context": "Nghị định 57/2022/NĐ-CP, Phụ lục I"
+    "question": "Tội sản xuất trái phép chất ma tuý bị xử lý thế nào theo Điều 248?",
+    "expected_answer": "Người nào sản xuất trái phép chất ma túy dưới bất kỳ hình thức nào thì bị phạt tù, khởi điểm từ 2 đến 7 năm; tùy khối lượng và tình tiết tăng nặng, mức cao nhất là tù 20 năm, chung thân hoặc tử hình.",
+    "expected_context": "Bộ luật Hình sự 2015, Điều 248"
+  },
+  {
+    "question": "Tội mua bán trái phép chất ma tuý theo Điều 251 có khung hình phạt cao nhất là gì?",
+    "expected_answer": "Tội mua bán trái phép chất ma túy có khung hình phạt cao nhất là tù 20 năm, tù chung thân hoặc tử hình khi thuộc các trường hợp đặc biệt nghiêm trọng về khối lượng.",
+    "expected_context": "Bộ luật Hình sự 2015, Điều 251"
+  },
+  {
+    "question": "Tội tổ chức sử dụng trái phép chất ma tuý được quy định ở điều nào và phạt ra sao?",
+    "expected_answer": "Tội tổ chức sử dụng trái phép chất ma túy quy định tại Điều 255 Bộ luật Hình sự, người phạm tội bị phạt tù khởi điểm từ 2 đến 7 năm, tăng nặng theo tình tiết có thể đến tù chung thân.",
+    "expected_context": "Bộ luật Hình sự 2015, Điều 255"
+  },
+  {
+    "question": "Tội vận chuyển trái phép chất ma tuý theo Điều 250 khác gì với tội tàng trữ?",
+    "expected_answer": "Điều 250 xử lý hành vi vận chuyển trái phép chất ma túy không nhằm mục đích sản xuất, mua bán; điểm khác biệt với tàng trữ (Điều 249) là ở hành vi di chuyển chất ma túy từ nơi này sang nơi khác.",
+    "expected_context": "Bộ luật Hình sự 2015, Điều 250"
+  },
+  {
+    "question": "Nghị định 105/2021/NĐ-CP hướng dẫn những nội dung gì của Luật Phòng chống ma tuý?",
+    "expected_answer": "Nghị định 105/2021/NĐ-CP quy định chi tiết và hướng dẫn thi hành một số điều của Luật Phòng, chống ma túy, gồm kiểm soát hoạt động hợp pháp liên quan đến ma túy, quản lý người sử dụng trái phép chất ma túy và công tác cai nghiện.",
+    "expected_context": "Nghị định 105/2021/NĐ-CP"
+  },
+  {
+    "question": "Trách nhiệm của cá nhân, gia đình trong phòng, chống ma tuý theo luật là gì?",
+    "expected_answer": "Cá nhân, gia đình có trách nhiệm tuyên truyền, giáo dục thành viên không vi phạm pháp luật về ma túy; khai báo về tình trạng nghiện; tham gia hỗ trợ người cai nghiện và phối hợp với cơ quan chức năng trong phòng, chống ma túy.",
+    "expected_context": "Luật Phòng chống ma tuý 2021"
+  },
+  {
+    "question": "Người nghiện ma tuý trong thời gian cai nghiện có những quyền và nghĩa vụ gì?",
+    "expected_answer": "Người cai nghiện được tư vấn, điều trị, hỗ trợ theo quy định, đồng thời có nghĩa vụ tuân thủ nội quy cơ sở cai nghiện, thực hiện đầy đủ quy trình cai nghiện và không sử dụng trái phép chất ma túy.",
+    "expected_context": "Luật Phòng chống ma tuý 2021"
+  },
+  {
+    "question": "Các chất ma tuý tuyệt đối cấm sử dụng (nhóm I) gồm những chất tiêu biểu nào?",
+    "expected_answer": "Nhóm các chất ma túy tuyệt đối cấm sử dụng trong y học và đời sống gồm heroin, cocaine, methamphetamine, MDMA (thuốc lắc), cần sa và các chất tương tự.",
+    "expected_context": "Danh mục chất ma túy, Nghị định 57/2022/NĐ-CP"
+  },
+  {
+    "question": "Ca sĩ Miu Lê bị bắt vì hành vi gì và vào thời điểm nào?",
+    "expected_answer": "Ca sĩ Miu Lê (tên thật Lê Ánh Nhật) bị Công an Hải Phòng khởi tố, bắt tạm giam ngày 16/5 về hành vi tổ chức sử dụng trái phép chất ma túy, sau khi bị bắt quả tang tại đảo Cát Bà.",
+    "expected_context": "Bài báo VnExpress về Miu Lê"
+  },
+  {
+    "question": "Ca sĩ Long Nhật liên quan tới vụ án ma tuý như thế nào?",
+    "expected_answer": "Ca sĩ Long Nhật (Đinh Long Nhật) bị Công an TP HCM khởi tố, bắt về hành vi tổ chức sử dụng trái phép chất ma túy, nằm trong loạt nghệ sĩ bị xử lý liên quan ma túy.",
+    "expected_context": "Bài báo VnExpress về Long Nhật"
+  },
+  {
+    "question": "Ca sĩ Chu Bin bị bắt trong hoàn cảnh nào?",
+    "expected_answer": "Tháng 6/2024, ca sĩ Chu Bin bị bắt khi công an phát hiện anh cùng nhiều người đang sử dụng ma túy tại một địa điểm ở TP HCM.",
+    "expected_context": "Bài báo về sao Việt liên quan ma túy"
+  },
+  {
+    "question": "Diễn viên hài Hiệp Gà từng bị xử lý về ma tuý ra sao?",
+    "expected_answer": "Diễn viên hài Hiệp Gà từng bị công an bắt quả tang về hành vi liên quan đến ma túy (tàng trữ/sử dụng) tại Hà Nội.",
+    "expected_context": "Bài báo về nghệ sĩ Việt liên quan ma túy"
+  },
+  {
+    "question": "Hệ quả sự nghiệp với các nghệ sĩ Việt khi vướng vào ma tuý là gì?",
+    "expected_answer": "Các nghệ sĩ vướng ma túy thường bị bắt, khởi tố, mất danh tiếng, dừng hoạt động nghệ thuật và ảnh hưởng nghiêm trọng tới sự nghiệp.",
+    "expected_context": "Bài báo tổng hợp sao Việt và chất cấm"
+  },
+  {
+    "question": "Thủ đô của nước Pháp tên là gì?",
+    "expected_answer": "Tôi không thể xác minh thông tin này từ nguồn hiện có (câu hỏi nằm ngoài phạm vi corpus về pháp luật ma túy và tin tức nghệ sĩ).",
+    "expected_context": "Ngoài phạm vi corpus — kiểm tra khả năng abstain"
   }
 ]
