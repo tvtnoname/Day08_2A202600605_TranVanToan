@@ -1,0 +1,30 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Environments
+.env
+.env.*
+!.env.example
+venv/
+.venv/
+env/
+
+# Editor/IDEs
+.vscode/
+.idea/
+
+
+# User-requested files to exclude from git
+document.md
+plan.md
+**/document.md
+**/plan.md
