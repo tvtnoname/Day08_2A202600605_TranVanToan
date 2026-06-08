@@ -1,0 +1,40 @@
+# Core
+python-dotenv>=1.0.0
+requests>=2.31.0
+
+# Task 2 - Crawling (dùng requests + trafilatura thay cho Crawl4AI cho nhẹ/ổn định)
+trafilatura>=1.8.0
+# crawl4ai>=0.3.0        # Alternative (cần Playwright + Chromium)
+
+# Task 3 - Document conversion
+markitdown>=0.1.0
+
+# Task 4 - Chunking & Indexing (Weaviate Cloud + Jina embeddings API)
+langchain-text-splitters>=0.2.0
+weaviate-client>=4.21.0   # cần >=4.21 cho cluster vector index 'hfresh'
+# sentence-transformers>=2.2.0  # nếu dùng embedding local thay Jina
+# chromadb>=0.4.0        # Alternative vector store
+# faiss-cpu>=1.7.4       # Alternative
+
+# Task 6 - BM25: dùng BM25 built-in của Weaviate (không cần thư viện riêng)
+# rank-bm25>=0.2.2       # Alternative nếu làm BM25 thủ công
+
+# Task 7 - Reranking: Jina Reranker API (dùng chung JINA_API_KEY, không cần model local)
+# transformers>=4.40.0   # nếu dùng cross-encoder local
+
+# Task 8 - PageIndex
+pageindex>=0.1.0
+
+# Task 10 - Generation
+openai>=1.30.0
+# google-generativeai>=0.5.0  # Alternative: Gemini
+
+# Group project - UI
+streamlit>=1.35.0
+# gradio>=4.30.0         # Alternative
+# chainlit>=1.0.0        # Alternative for chatbot
+
+# Group project - Evaluation (choose one)
+deepeval>=1.0.0
+# ragas>=0.1.0           # Alternative
+# trulens>=1.0.0         # Alternative

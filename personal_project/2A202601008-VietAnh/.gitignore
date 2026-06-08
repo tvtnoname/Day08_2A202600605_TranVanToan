@@ -1,0 +1,14 @@
+# Secrets — KHÔNG commit
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+
+# PageIndex doc_id cache (tạo lại được bằng upload_documents)
+data/pageindex_docs.json
+
+# OS
+.DS_Store
